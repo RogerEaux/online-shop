@@ -1,0 +1,30 @@
+.search {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid lightgray;
+  border-radius: 3px;
+}
+
+.search:focus-within {
+  border: 2px solid black;
+}
+
+.searchBox {
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.searchButton {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchButton > img {
+  vertical-align: middle;
+  width: 16px;
+  height: auto;
+}
