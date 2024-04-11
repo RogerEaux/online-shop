@@ -1,8 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import SearchBar from '../components/SearchBar';
-import { expect } from 'vitest';
 
-describe('Searchbar component', () => {
+describe('SearchBar component', () => {
   it('renders text input', () => {
     render(<SearchBar />);
     expect(
