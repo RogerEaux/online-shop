@@ -1,0 +1,25 @@
+.linksList {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding: 8px;
+}
+
+.row {
+  composes: linksList;
+}
+
+.column {
+  composes: linksList;
+  flex-direction: column;
+}
+
+.linksItem > a {
+  text-decoration: none;
+  color: darkslategray;
+}
+
+.linksItem > a:hover {
+  text-decoration: underline;
+  color: black;
+}
