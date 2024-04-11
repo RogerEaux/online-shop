@@ -3,19 +3,20 @@ import SearchBar from './SearchBar';
 import logo from '../assets/logo-placeholder.png';
 import cart from '../assets/cart.svg';
 import { Link } from 'react-router-dom';
+import styles from '../styles/NavBar.module.css';
 
 function NavBar() {
   return (
-    <>
-      <Link to="/">
+    <nav className={styles.navBar}>
+      <Link to="/" className={styles.logo}>
         <img src={logo} alt="Fake Company" />
       </Link>
       <SearchBar />
       <Links direction="row" />
-      <button>
+      <button className={styles.cart}>
         <img src={cart} alt="Shopping Cart" />
       </button>
-    </>
+    </nav>
   );
 }
 

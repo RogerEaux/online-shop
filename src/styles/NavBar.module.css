@@ -1,0 +1,21 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 32px;
+}
+
+.logo > img {
+  height: 128px;
+  width: auto;
+}
+
+.cart {
+  border: none;
+  cursor: pointer;
+}
+
+.cart > img {
+  height: 32px;
+  width: auto;
+}
