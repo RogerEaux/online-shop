@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from '../styles/Links.module.css';
 
 function Links({ direction }) {
@@ -14,5 +15,9 @@ function Links({ direction }) {
     </>
   );
 }
+
+Links.propTypes = {
+  direction: PropTypes.string,
+};
 
 export default Links;
