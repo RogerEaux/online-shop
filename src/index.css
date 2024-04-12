@@ -5,6 +5,8 @@
 
 :root {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+
+  --dark-blue: #000020;
 }
 
 * {
