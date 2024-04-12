@@ -25,18 +25,15 @@ describe('Banner component', () => {
     );
   });
 
-  it('renders start shopping button', () => {
+  it('renders start shopping link', () => {
     render(
       <BrowserRouter>
         <Banner />
       </BrowserRouter>,
     );
     expect(
-      screen.getByRole('button', { name: /start shopping/i }).textContent,
-    ).toMatch(/start shopping/i);
-    expect(
-      screen.getByRole('button', { name: /start shopping/i }),
-    ).toContainElement(screen.getByRole('link', { name: /start shopping/i }));
+      screen.getByRole('link', { name: /start shopping/i }),
+    ).toBeInTheDocument();
   });
 
   it('renders future tunnel image', () => {
