@@ -24,5 +24,8 @@ describe('Banner component', () => {
     expect(
       screen.getByRole('button', { name: /start shopping/i }).textContent,
     ).toMatch(/start shopping/i);
+    expect(
+      screen.getByRole('button', { name: /start shopping/i }),
+    ).toContainElement(screen.getByRole('link', { name: /start shopping/i }));
   });
 });
