@@ -38,4 +38,15 @@ describe('Banner component', () => {
       screen.getByRole('button', { name: /start shopping/i }),
     ).toContainElement(screen.getByRole('link', { name: /start shopping/i }));
   });
+
+  it('renders future tunnel image', () => {
+    render(
+      <BrowserRouter>
+        <Banner />
+      </BrowserRouter>,
+    );
+    expect(
+      screen.getByRole('img', { name: /tunnel looking into the future/i }),
+    ).toBeInTheDocument();
+  });
 });
