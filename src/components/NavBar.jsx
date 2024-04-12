@@ -9,7 +9,7 @@ function NavBar() {
   return (
     <nav className={styles.navBar}>
       <Link to="/" className={styles.logo}>
-        <img src={logo} alt="Fake Company" />
+        <img src={logo} alt="The Company" />
       </Link>
       <SearchBar />
       <Links direction="row" />
