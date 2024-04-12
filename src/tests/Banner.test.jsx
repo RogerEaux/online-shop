@@ -11,7 +11,7 @@ describe('Banner component', () => {
     );
     expect(
       screen.getByRole('heading', { name: /slogan/i }).textContent,
-    ).toMatch(/see into the future, experience it now/i);
+    ).toMatch(/see into the future, use it now/i);
   });
 
   it('renders heading with quote', () => {
