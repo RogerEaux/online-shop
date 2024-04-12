@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Roboto;
+  src: url('./assets/fonts/Roboto-Regular.ttf');
+}
+
+:root {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
