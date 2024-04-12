@@ -1,22 +1,33 @@
 import { Link } from 'react-router-dom';
 import future from '../assets/future.jpg';
+import styles from '../styles/Banner.module.css';
 
 function Banner() {
   return (
-    <>
-      <h1 aria-label="slogan">
-        See into <strong>the future</strong>, experience it
-        <strong> now</strong>
+    <header className={styles.banner}>
+      <h1 className={styles.slogan} aria-label="slogan">
+        See into{' '}
+        <span>
+          <strong>the future, </strong>
+        </span>
+        use it
+        <span>
+          <strong> now</strong>
+        </span>
       </h1>
-      <h2 aria-label="quote">
+      <h2 className={styles.quote} aria-label="quote">
         Look into the future, because that is where you are going to spend the
         rest of your life
       </h2>
-      <button>
-        <Link to="./shop">Start Shopping</Link>
-      </button>
-      <img src={future} alt="Tunnel looking into the future" />
-    </>
+      <Link className={styles.shop} to="./shop">
+        Start Shopping
+      </Link>
+      <img
+        className={styles.future}
+        src={future}
+        alt="Tunnel looking into the future"
+      />
+    </header>
   );
 }
 

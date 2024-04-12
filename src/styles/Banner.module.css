@@ -1,0 +1,58 @@
+.banner {
+  display: grid;
+  grid-template:
+    'slogan future'
+    'quote future'
+    'shop future' / 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+  min-height: calc(100vh - 132px);
+  padding: 0 64px;
+}
+
+.slogan {
+  grid-area: slogan;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 6rem;
+}
+
+.slogan span {
+  text-align: end;
+}
+
+.quote {
+  grid-area: quote;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.shop {
+  grid-area: shop;
+  justify-self: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--dark-blue);
+  padding: 16px;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+}
+
+.shop:hover {
+  transition: all 0.5s ease;
+  border: 2px solid var(--dark-blue);
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.future {
+  grid-area: future;
+  justify-self: center;
+  max-width: 35vw;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: var(--dark-blue) 0px 0px 16px 16px;
+}
