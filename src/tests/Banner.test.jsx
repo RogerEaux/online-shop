@@ -14,4 +14,15 @@ describe('Banner component', () => {
       screen.getByRole('heading', { name: /slogan/i }).textContent,
     ).toMatch(/look into the future, experience it now/i);
   });
+
+  it('renders start shopping button', () => {
+    render(
+      <BrowserRouter>
+        <Banner />
+      </BrowserRouter>,
+    );
+    expect(
+      screen.getByRole('button', { name: /start shopping/i }).textContent,
+    ).toMatch(/start shopping/i);
+  });
 });
