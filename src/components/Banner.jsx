@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Banner() {
   return (
     <>
@@ -5,7 +7,9 @@ function Banner() {
         Look into <strong>the future</strong>, experience it
         <strong> now</strong>
       </h1>
-      <button>Start Shopping</button>
+      <button>
+        <Link>Start Shopping</Link>
+      </button>
     </>
   );
 }
