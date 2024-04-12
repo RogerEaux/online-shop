@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import future from '../assets/future.jpg';
 
 function Banner() {
   return (
@@ -14,6 +15,7 @@ function Banner() {
       <button>
         <Link to="./shop">Start Shopping</Link>
       </button>
+      <img src={future} alt="Tunnel looking into the future" />
     </>
   );
 }
