@@ -2,7 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 32px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(211, 211, 211, 0.2);
+  backdrop-filter: blur(32px);
+  padding: 0 64px;
 }
 
 .logo > img {
@@ -13,9 +17,11 @@
 .cart {
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .cart > img {
+  display: block;
   height: 32px;
   width: auto;
 }
