@@ -7,6 +7,7 @@ function Marquee() {
         <p>The Future is Now is</p>
         <p>The Future is Now is</p>
         <p>The Future is Now is</p>
+        <p>The Future is Now is</p>
       </section>
     </>
   );
