@@ -1,7 +1,7 @@
 .linksList {
   list-style: none;
   display: flex;
-  gap: 16px;
+  gap: 32px;
   padding: 8px;
 }
 
@@ -16,10 +16,9 @@
 
 .linksItem > a {
   text-decoration: none;
-  color: darkslategray;
+  color: black;
 }
 
 .linksItem > a:hover {
   text-decoration: underline;
-  color: black;
 }
