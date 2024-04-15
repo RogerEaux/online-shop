@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import styles from '../styles/Links.module.css';
 import { Link } from 'react-router-dom';
 
-function Links({ direction }) {
+function Links({ column }) {
   return (
     <>
-      <ul className={`${styles[direction]}`}>
+      <ul className={column ? styles.column : styles.linksList}>
         <li className={styles.linksItem}>
           <Link to="/">Home</Link>
         </li>
@@ -18,7 +18,7 @@ function Links({ direction }) {
 }
 
 Links.propTypes = {
-  direction: PropTypes.string,
+  column: PropTypes.bool,
 };
 
 export default Links;
