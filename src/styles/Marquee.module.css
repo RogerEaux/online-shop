@@ -1,41 +1,33 @@
 .marquee {
   display: flex;
-  align-items: center;
   height: 10vw;
+  user-select: none;
   overflow: hidden;
+  gap: 8px;
+  padding: 16px 0;
   background-color: var(--dark-blue);
   color: white;
 }
 
-.marquee p {
-  position: absolute;
-  width: 100%;
-  transform: translateX(100%);
-  font-weight: 700;
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  animation: scroll 6s linear infinite;
+}
+
+.group p {
   font-size: 5.5vw;
+  font-weight: 800;
+  text-wrap: nowrap;
 }
 
-.marquee p:nth-of-type(1) {
-  animation: scroll-left 8s linear infinite;
-}
-
-.marquee p:nth-of-type(2) {
-  animation: scroll-left 8s linear 2s infinite;
-}
-
-.marquee p:nth-of-type(3) {
-  animation: scroll-left 8s linear 4s infinite;
-}
-
-.marquee p:nth-of-type(4) {
-  animation: scroll-left 8s linear 6s infinite;
-}
-
-@keyframes scroll-left {
+@keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% - 2.75vw));
+    transform: translateX(calc(-100% - 16px));
   }
 }
