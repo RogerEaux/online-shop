@@ -27,6 +27,7 @@
 }
 
 .title {
+  font-size: 2rem;
   padding: 4px 32px;
   border-bottom: 5px solid var(--dark-blue);
   visibility: hidden;
