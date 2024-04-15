@@ -51,7 +51,7 @@
 .future {
   grid-area: future;
   justify-self: center;
-  max-width: 35vw;
+  width: 35vw;
   object-fit: contain;
   border-radius: 50%;
   box-shadow: var(--dark-blue) 0px 0px 16px 16px;
