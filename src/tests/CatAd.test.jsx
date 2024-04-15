@@ -8,7 +8,7 @@ describe('CatAd component', () => {
 
     render(
       <BrowserRouter>
-        <CatAd title={title} />
+        <CatAd title={title} cover={'gaming-pc.jpg'} />
       </BrowserRouter>,
     );
 
