@@ -29,4 +29,19 @@ describe('Footer component', () => {
       screen.getByText(/The Company is an online tech commerce seller./i),
     ).toBeInTheDocument();
   });
+
+  it('renders copyright message and github link', () => {
+    render(
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>,
+    );
+
+    expect(
+      screen.getByText('© 2024 RogerEaux. All Rights Reserved'),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('Project made by RogerEaux using FakeStore API.'),
+    ).toBeInTheDocument();
+  });
 });
