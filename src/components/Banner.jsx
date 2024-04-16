@@ -9,7 +9,7 @@ function Banner() {
       <h1 className={styles.slogan} aria-label="slogan">
         See into
         <span>
-          <strong>the future, </strong>
+          <strong> the future, </strong>
         </span>
         use it
         <span>
@@ -22,9 +22,9 @@ function Banner() {
       </h2>
       <div className={styles.shop}>
         <Link to="./shop">Start Shopping</Link>
-        <img aria-hidden src={rightArrow} alt="" />
-        <img aria-hidden src={rightArrow} alt="" />
-        <img aria-hidden src={rightArrow} alt="" />
+        <img aria-hidden src={rightArrow} alt="arrow" />
+        <img aria-hidden src={rightArrow} alt="arrow" />
+        <img aria-hidden src={rightArrow} alt="arrow" />
       </div>
       <img
         className={styles.future}

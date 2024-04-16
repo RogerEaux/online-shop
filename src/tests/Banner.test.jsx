@@ -53,6 +53,6 @@ describe('Banner component', () => {
         <Banner />
       </BrowserRouter>,
     );
-    expect(screen.getAllByRole('img', { name: /arrow/i }).length).toBe(3);
+    expect(screen.getAllByAltText(/arrow/i).length).toBe(3);
   });
 });
