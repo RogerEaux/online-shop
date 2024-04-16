@@ -46,4 +46,13 @@ describe('Banner component', () => {
       screen.getByRole('img', { name: /tunnel looking into the future/i }),
     ).toBeInTheDocument();
   });
+
+  it('renders three arrow images', () => {
+    render(
+      <BrowserRouter>
+        <Banner />
+      </BrowserRouter>,
+    );
+    expect(screen.getAllByRole('img', { name: /arrow/i }).length).toBe(3);
+  });
 });
