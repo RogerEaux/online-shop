@@ -30,7 +30,7 @@ describe('Footer component', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders copyright message and github link', () => {
+  it('renders copyright and API message', () => {
     render(
       <BrowserRouter>
         <Footer />
@@ -41,7 +41,16 @@ describe('Footer component', () => {
       screen.getByText('© 2024 RogerEaux. All Rights Reserved'),
     ).toBeInTheDocument();
     expect(
-      screen.getByText('Project made by RogerEaux using FakeStore API.'),
+      screen.getByText('Project made by RogerEaux using FakeStore API'),
     ).toBeInTheDocument();
+  });
+
+  it('renders GitHub link', () => {
+    render(
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>,
+    );
+    expect(screen.getByRole('link', { name: /github/i })).toBeInTheDocument();
   });
 });
