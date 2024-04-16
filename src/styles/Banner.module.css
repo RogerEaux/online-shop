@@ -35,17 +35,18 @@
   font-weight: 700;
   font-size: 2rem;
   cursor: pointer;
+  background-color: var(--invert);
   color: black;
   padding: 16px;
-  border: 2px solid darkgray;
+  border: 2px solid var(--idle);
   border-radius: 5px;
 }
 
 .shop:hover {
   transition: all 0.5s ease;
-  border: 2px solid var(--dark-blue);
-  background-color: var(--dark-blue);
-  color: white;
+  border: 2px solid var(--secondary);
+  background-color: var(--secondary);
+  color: var(--invert);
 }
 
 .future {
@@ -54,5 +55,5 @@
   width: 35vw;
   object-fit: contain;
   border-radius: 50%;
-  box-shadow: var(--dark-blue) 0px 0px 16px 16px;
+  box-shadow: var(--primary) 0px 0px 16px 16px;
 }

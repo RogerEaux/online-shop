@@ -4,17 +4,18 @@
   justify-content: center;
   width: max-content;
   transition: all 0.5s ease;
-  border: 2px solid darkgray;
+  border: 2px solid var(--idle);
   border-radius: 3px;
 }
 
 .search:focus-within {
   transition: all 0.5s ease;
-  border: 2px solid black;
+  border: 2px solid var(--secondary);
 }
 
 .searchBox {
   padding: 8px;
+  font-size: 1.1rem;
   border: none;
   outline: none;
 }
@@ -27,6 +28,6 @@
 
 .searchButton > img {
   vertical-align: middle;
-  width: 16px;
+  width: 20px;
   height: auto;
 }

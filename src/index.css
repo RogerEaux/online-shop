@@ -6,7 +6,12 @@
 :root {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 
-  --dark-blue: #000020;
+  --primary: #101020;
+  --invert: #efefff;
+  --secondary: #201810;
+  --idle: darkgray;
+
+  background-color: var(--invert);
 }
 
 * {

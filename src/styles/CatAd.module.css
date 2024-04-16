@@ -17,7 +17,7 @@
   flex-direction: row-reverse;
 
   .cover > img {
-    border-left: 5px solid var(--dark-blue);
+    border-left: 5px solid var(--primary);
     border-right: none;
   }
 
@@ -29,7 +29,7 @@
 .title {
   font-size: 2rem;
   padding: 4px 32px;
-  border-bottom: 5px solid var(--dark-blue);
+  border-bottom: 5px solid var(--primary);
   visibility: hidden;
   transform-origin: left;
   transform: scaleX(0);
@@ -40,5 +40,5 @@
   height: min(80vh, 50vw);
   padding: 0 32px;
   border-radius: 5px;
-  border-right: 5px solid var(--dark-blue);
+  border-right: 5px solid var(--primary);
 }

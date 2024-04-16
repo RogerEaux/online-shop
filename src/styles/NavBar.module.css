@@ -4,7 +4,7 @@
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: #efefff80;
   backdrop-filter: blur(32px);
   padding: 0 64px;
   z-index: 10;
