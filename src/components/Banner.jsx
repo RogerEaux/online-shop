@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import future from '../assets/images/future.jpg';
+import rightArrow from '../assets/svg/right-arrow.svg';
 import styles from '../styles/Banner.module.css';
 
 function Banner() {
@@ -19,9 +20,12 @@ function Banner() {
         Look into the future, because that is where you are going to spend the
         rest of your life
       </h2>
-      <Link className={styles.shop} to="./shop">
-        Start Shopping
-      </Link>
+      <div className={styles.shop}>
+        <Link to="./shop">Start Shopping</Link>
+        <img src={rightArrow} alt="arrow" />
+        <img src={rightArrow} alt="arrow" />
+        <img src={rightArrow} alt="arrow" />
+      </div>
       <img
         className={styles.future}
         src={future}
