@@ -16,7 +16,12 @@ function Footer() {
         </p>
       </div>
       <Links column={true} />
-      <p>© 2024 RogerEaux. All Rights Reserved</p>
+      <div>
+        <Link to="/">
+          <img src={github} alt="github" />
+        </Link>
+        <p>© 2024 RogerEaux. All Rights Reserved</p>
+      </div>
       <p>Project made by RogerEaux using FakeStore API</p>
     </footer>
   );
