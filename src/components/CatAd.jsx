@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function CatAd({ title, cover, reverse }) {
   function getImageURL() {
-    return new URL(`../assets/${cover}`, import.meta.url).href;
+    return new URL(`../assets/images/${cover}`, import.meta.url).href;
   }
 
   return (

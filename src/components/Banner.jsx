@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import future from '../assets/future.jpg';
+import future from '../assets/images/future.jpg';
 import styles from '../styles/Banner.module.css';
 
 function Banner() {

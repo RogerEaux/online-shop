@@ -1,4 +1,4 @@
-import searchIcon from '../assets/search.svg';
+import searchIcon from '../assets/svg/search.svg';
 import styles from '../styles/SearchBar.module.css';
 
 function SearchBar() {
