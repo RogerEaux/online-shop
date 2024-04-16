@@ -7,7 +7,7 @@ function Banner() {
   return (
     <header className={styles.banner}>
       <h1 className={styles.slogan} aria-label="slogan">
-        See into{' '}
+        See into
         <span>
           <strong>the future, </strong>
         </span>
@@ -22,9 +22,9 @@ function Banner() {
       </h2>
       <div className={styles.shop}>
         <Link to="./shop">Start Shopping</Link>
-        <img src={rightArrow} alt="arrow" />
-        <img src={rightArrow} alt="arrow" />
-        <img src={rightArrow} alt="arrow" />
+        <img src={rightArrow} alt="" />
+        <img src={rightArrow} alt="" />
+        <img src={rightArrow} alt="" />
       </div>
       <img
         className={styles.future}

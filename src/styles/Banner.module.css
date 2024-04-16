@@ -29,9 +29,17 @@
 }
 
 .shop {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.shop > a {
   grid-area: shop;
   justify-self: center;
   text-decoration: none;
+  text-wrap: nowrap;
   font-weight: 700;
   font-size: 2rem;
   cursor: pointer;
@@ -42,11 +50,34 @@
   border-radius: 5px;
 }
 
-.shop:hover {
-  transition: all 0.5s ease;
+.shop img {
+  visibility: hidden;
+  opacity: 0.5;
+  height: 48px;
+  width: auto;
+}
+
+.shop > a:hover {
+  transition: all 0.25s ease;
   border: 2px solid var(--secondary);
   background-color: var(--secondary);
   color: var(--invert);
+}
+
+.shop > a:hover ~ img {
+  visibility: visible;
+}
+
+.shop > img:nth-of-type(1) {
+  animation: show 0.75s infinite ease;
+}
+
+.shop > img:nth-of-type(2) {
+  animation: show 0.75s infinite ease 0.25s;
+}
+
+.shop > img:nth-of-type(3) {
+  animation: show 0.75s infinite ease 0.5s;
 }
 
 .future {
@@ -56,4 +87,14 @@
   object-fit: contain;
   border-radius: 50%;
   box-shadow: var(--primary) 0px 0px 16px 16px;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
