@@ -4,14 +4,9 @@ function Marquee() {
   return (
     <>
       <section role="marquee" className={styles.marquee}>
-        <div className={styles.group}>
-          <p>The Future is Now is</p>
-          <p>The Future is Now is</p>
-        </div>
-        <div className={styles.group}>
-          <p>The Future is Now is</p>
-          <p>The Future is Now is</p>
-        </div>
+        <p>The Future is Now is</p>
+        <p>The Future is Now is</p>
+        <p>The Future is Now is</p>
       </section>
     </>
   );

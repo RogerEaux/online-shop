@@ -1,5 +1,7 @@
 .marquee {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 10vw;
   user-select: none;
   overflow: hidden;
@@ -9,18 +11,11 @@
   color: white;
 }
 
-.group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  animation: scroll 6s linear infinite;
-}
-
-.group p {
-  font-size: 5.5vw;
+.marquee p {
+  font-size: 6vw;
   font-weight: 800;
   text-wrap: nowrap;
+  animation: scroll 4s linear infinite;
 }
 
 @keyframes scroll {
