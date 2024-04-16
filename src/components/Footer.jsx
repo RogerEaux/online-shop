@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo-placeholder.png';
+import github from '../assets/svg/github.svg';
+import Links from './Links';
 
 function Footer() {
   return (
@@ -12,6 +15,9 @@ function Footer() {
           offers some of the top and cutting-edge technology.
         </p>
       </div>
+      <Links column={true} />
+      <p>© 2024 RogerEaux. All Rights Reserved</p>
+      <p>Project made by RogerEaux using FakeStore API</p>
     </footer>
   );
 }
