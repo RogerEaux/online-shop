@@ -22,9 +22,9 @@ function Banner() {
       </h2>
       <div className={styles.shop}>
         <Link to="./shop">Start Shopping</Link>
-        <img src={rightArrow} alt="" />
-        <img src={rightArrow} alt="" />
-        <img src={rightArrow} alt="" />
+        <img aria-hidden src={rightArrow} alt="" />
+        <img aria-hidden src={rightArrow} alt="" />
+        <img aria-hidden src={rightArrow} alt="" />
       </div>
       <img
         className={styles.future}
