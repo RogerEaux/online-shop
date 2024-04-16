@@ -27,7 +27,7 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 4px 32px;
   border-bottom: 5px solid var(--primary);
   visibility: hidden;
@@ -37,7 +37,7 @@
 }
 
 .cover > img {
-  height: min(80vh, 50vw);
+  height: min(80vh, 40vw);
   padding: 0 32px;
   border-radius: 5px;
   border-right: 5px solid var(--primary);
