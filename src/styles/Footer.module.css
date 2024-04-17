@@ -4,7 +4,6 @@
     'about links'
     'author author' / 3fr 2fr;
   align-items: start;
-  justify-items: center;
   padding: 32px 64px;
   background-color: var(--primary);
   color: var(--invert);
@@ -21,12 +20,13 @@
 }
 
 .about p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5rem;
 }
 
 .links {
   grid-area: links;
+  justify-self: end;
   padding: 0 32px;
 }
 
@@ -55,6 +55,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  font-size: 1.1rem;
   padding: 0 32px;
   margin-top: 128px;
   color: var(--idle);
@@ -68,7 +69,13 @@
 .author img {
   height: 32px;
   width: auto;
-  padding-right: 8px;
+  margin-right: 16px;
+  transition: all 0.75s ease;
+}
+
+.author img:hover {
+  transition: all 0.75s ease;
+  transform: rotate(360deg) scale(1.2);
 }
 
 .author :last-child {
