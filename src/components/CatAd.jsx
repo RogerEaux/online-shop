@@ -12,8 +12,10 @@ function CatAd({ title, description, cover, reverse }) {
       <Link to={'/'} className={styles.cover}>
         <img src={getImageURL(cover)} alt={title} />
       </Link>
-      <h2 className={styles.title}>{title}</h2>
-      <h3 className={styles.description}>{description}</h3>
+      <div className={styles.info}>
+        <h2>{title}</h2>
+        <h3>{description}</h3>
+      </div>
     </section>
   );
 }

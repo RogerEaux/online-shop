@@ -5,11 +5,11 @@
   color: var(--primary);
 }
 
-.cover:hover + .title,
-.cover:focus + .title {
+.cover:hover + .info,
+.cover:focus + .info {
   visibility: visible;
-  transform: scaleX(1);
-  transition: all 0.25s ease;
+  transform: rotateY(0);
+  transition: all 0.5s ease;
 }
 
 .reverse {
@@ -22,20 +22,28 @@
     border-right: none;
   }
 
-  .title {
+  .info {
     transform-origin: right;
   }
 }
 
-.title {
-  font-size: 2.5rem;
-  padding: 4px 32px;
-  border-bottom: 10px solid var(--primary);
+.info {
   margin-top: 64px;
   visibility: hidden;
   transform-origin: left;
-  transform: scaleX(0);
-  text-decoration: none;
+  transform: rotateY(-90deg);
+  transition: all 0.5s ease;
+}
+
+.info > h2 {
+  font-size: 2.5rem;
+  padding: 32px;
+  border-bottom: 10px solid var(--primary);
+}
+
+.info > h3 {
+  font-size: 2rem;
+  padding: 32px;
 }
 
 .cover > img {
