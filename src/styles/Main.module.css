@@ -6,10 +6,19 @@
   background-image: url('../assets/images/blue-circles.jpg');
   background-size: cover;
   background-attachment: fixed;
+  text-align: center;
+  margin-bottom: 64px;
 }
 
 .main > h1 {
   font-size: 3rem;
   align-self: center;
   color: var(--primary);
+  padding: 64px;
+}
+
+.main strong {
+  display: block;
+  font-size: 7rem;
+  margin-top: 64px;
 }
