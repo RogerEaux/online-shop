@@ -12,6 +12,6 @@ describe('Main component', () => {
 
     expect(
       screen.getByRole('heading', { name: /promotional message/i }).textContent,
-    ).toMatch(/take a look at some of the deals we have to offer!/i);
+    ).toMatch('Do not hesitate. The time for innovation is NOW');
   });
 });
