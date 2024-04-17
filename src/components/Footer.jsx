@@ -25,7 +25,10 @@ function Footer() {
           </Link>
           <p>© 2024 RogerEaux</p>
         </div>
-        <p>Project made using FakeStore API</p>
+        <p>
+          <span>Project made using </span>
+          <Link to="https://fakestoreapi.com">FakeStore API</Link>
+        </p>
       </div>
     </footer>
   );

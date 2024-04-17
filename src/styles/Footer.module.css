@@ -80,3 +80,15 @@
 .author :last-child {
   text-align: end;
 }
+
+.author :last-child > a {
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.author :last-child > a:hover,
+.author :last-child > a:focus {
+  text-decoration: underline 2px solid var(--invert);
+  color: var(--invert);
+}
