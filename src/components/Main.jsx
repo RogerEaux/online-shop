@@ -7,8 +7,17 @@ function Main() {
       <h1 aria-label="Promotional message">
         Take a look at some of the deals we have to offer!
       </h1>
-      <CatAd title="Best Gaming PCs" cover={'gaming-pc.jpg'} />
-      <CatAd title="Best Gaming PCs" cover={'gaming-pc.jpg'} reverse={true} />
+      <CatAd
+        title="Best Gaming PCs"
+        description="Unleash your potential"
+        cover={'gaming-pc.jpg'}
+      />
+      <CatAd
+        title="Best Gaming PCs"
+        description="Unleash your potential"
+        cover={'gaming-pc.jpg'}
+        reverse={true}
+      />
     </main>
   );
 }
