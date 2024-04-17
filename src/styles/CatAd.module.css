@@ -1,8 +1,8 @@
 .catAd {
   align-self: start;
   display: flex;
-  align-items: center;
-  color: black;
+  align-items: start;
+  color: var(--primary);
 }
 
 .cover:hover + .title,
@@ -18,7 +18,7 @@
   flex-direction: row-reverse;
 
   .cover > img {
-    border-left: 5px solid var(--primary);
+    border-left: 10px solid var(--primary);
     border-right: none;
   }
 
@@ -28,9 +28,10 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 4px 32px;
-  border-bottom: 5px solid var(--primary);
+  border-bottom: 10px solid var(--primary);
+  margin-top: 64px;
   visibility: hidden;
   transform-origin: left;
   transform: scaleX(0);
@@ -40,6 +41,6 @@
 .cover > img {
   height: min(80vh, 40vw);
   padding: 0 32px;
-  border-radius: 5px;
-  border-right: 5px solid var(--primary);
+  border-radius: 10px;
+  border-right: 10px solid var(--primary);
 }
