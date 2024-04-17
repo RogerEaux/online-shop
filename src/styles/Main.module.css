@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 64px;
   padding: 64px;
   padding-bottom: 128px;
   background-image: url('../assets/images/blue-circles.jpg');
