@@ -5,7 +5,7 @@ function Main() {
   return (
     <main className={styles.main}>
       <h1 aria-label="Promotional message">
-        Take a look at some of the deals we have to offer!
+        Do not hesitate. The time for innovation is <strong>NOW</strong>
       </h1>
       <CatAd
         title="Best Gaming PCs"
