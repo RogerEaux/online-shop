@@ -42,7 +42,8 @@
   color: var(--idle);
 }
 
-.links a:hover {
+.links a:hover,
+.links a:focus {
   color: inherit;
   text-decoration: underline 2px var(--invert);
 }
@@ -70,7 +71,8 @@
   transition: all 0.75s ease;
 }
 
-.author img:hover {
+.author img:hover,
+.author a:focus > img {
   transition: all 0.75s ease;
   transform: rotate(360deg) scale(1.2);
 }

@@ -17,6 +17,7 @@
   color: var(--secondary);
 }
 
-.linksItem > a:hover {
+.linksItem > a:hover,
+.linksItem > a:focus {
   text-decoration: underline 2px var(--secondary);
 }

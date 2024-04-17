@@ -57,14 +57,16 @@
   width: auto;
 }
 
-.shop > a:hover {
+.shop > a:hover,
+.shop > a:focus {
   transition: all 0.25s ease;
   border: 2px solid var(--secondary);
   background-color: var(--secondary);
   color: var(--invert);
 }
 
-.shop > a:hover ~ img {
+.shop > a:hover ~ img,
+.shop > a:focus ~ img {
   visibility: visible;
 }
 

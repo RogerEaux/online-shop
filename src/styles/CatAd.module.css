@@ -5,7 +5,8 @@
   color: black;
 }
 
-.cover:hover + .title {
+.cover:hover + .title,
+.cover:focus + .title {
   visibility: visible;
   transform: scaleX(1);
   transition: all 0.25s ease;
