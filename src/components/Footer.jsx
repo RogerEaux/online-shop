@@ -20,7 +20,7 @@ function Footer() {
       </div>
       <div className={styles.author}>
         <div>
-          <Link to="/">
+          <Link to="https://github.com/RogerEaux/shopping-cart">
             <img src={github} alt="github" />
           </Link>
           <p>© 2024 RogerEaux</p>
