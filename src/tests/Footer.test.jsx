@@ -26,9 +26,7 @@ describe('Footer component', () => {
     );
 
     expect(screen.getByText('© 2024 RogerEaux')).toBeInTheDocument();
-    expect(
-      screen.getByText('Project made using FakeStore API'),
-    ).toBeInTheDocument();
+    expect(screen.getByText('Project made using')).toBeInTheDocument();
   });
 
   it('renders GitHub link', () => {
@@ -38,5 +36,16 @@ describe('Footer component', () => {
       </BrowserRouter>,
     );
     expect(screen.getByRole('link', { name: /github/i })).toBeInTheDocument();
+  });
+
+  it('renders FakeStore API link', () => {
+    render(
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>,
+    );
+    expect(
+      screen.getByRole('link', { name: /fakestore/i }),
+    ).toBeInTheDocument();
   });
 });
