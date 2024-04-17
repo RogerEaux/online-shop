@@ -3,18 +3,24 @@ import CatAd from '../components/CatAd';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('CatAd component', () => {
-  it('renders a section with a heading and image', () => {
+  it('renders a section with a heading, image and description', () => {
     const title = 'Best Gaming PCs';
+    const description = 'Unleash your potential';
 
     render(
       <BrowserRouter>
-        <CatAd title={title} cover={'gaming-pc.jpg'} />
+        <CatAd
+          title={title}
+          cover={'gaming-pc.jpg'}
+          description={description}
+        />
       </BrowserRouter>,
     );
 
     expect(screen.getByRole('section')).toContainElement(
       screen.getByRole('heading', { name: title }),
       screen.getByRole('img', { name: title }),
+      screen.getByRole('heading', { name: description }),
     );
   });
 });
