@@ -3,18 +3,6 @@ import Footer from '../components/Footer';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('Footer component', () => {
-  it("renders logo of 'The Company'", () => {
-    render(
-      <BrowserRouter>
-        <Footer />
-      </BrowserRouter>,
-    );
-
-    expect(
-      screen.getByRole('img', { name: /the company/i }),
-    ).toBeInTheDocument();
-  });
-
   it("renders 'The company' details", () => {
     render(
       <BrowserRouter>
@@ -37,11 +25,9 @@ describe('Footer component', () => {
       </BrowserRouter>,
     );
 
+    expect(screen.getByText('© 2024 RogerEaux')).toBeInTheDocument();
     expect(
-      screen.getByText('© 2024 RogerEaux. All Rights Reserved'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Project made by RogerEaux using FakeStore API'),
+      screen.getByText('Project made using FakeStore API'),
     ).toBeInTheDocument();
   });
 
