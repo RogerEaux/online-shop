@@ -5,6 +5,7 @@
   align-items: start;
   color: var(--primary);
   padding: 64px 0;
+  padding-bottom: 32px;
 }
 
 .reverse {
