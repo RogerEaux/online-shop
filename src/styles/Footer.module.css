@@ -1,0 +1,76 @@
+.footer {
+  display: grid;
+  grid-template:
+    'about links'
+    'author author' / 3fr 2fr;
+  align-items: start;
+  justify-items: center;
+  padding: 32px 64px;
+  background-color: var(--primary);
+  color: var(--invert);
+}
+
+.about {
+  grid-area: about;
+  padding: 0 32px;
+}
+
+.about h1 {
+  margin-bottom: 32px;
+  font-size: 1.6rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.links {
+  grid-area: links;
+  padding: 0 32px;
+}
+
+.links h2 {
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+}
+
+.links ul {
+  padding: 0;
+  gap: 32px;
+}
+
+.links a {
+  color: var(--idle);
+}
+
+.links a:hover {
+  color: inherit;
+  text-decoration: underline 2px var(--invert);
+}
+
+.author {
+  grid-area: author;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 32px;
+  margin-top: 128px;
+  color: var(--idle);
+}
+
+.author div {
+  display: flex;
+  align-items: center;
+}
+
+.author img {
+  height: 32px;
+  width: auto;
+  padding-right: 8px;
+}
+
+.author :last-child {
+  text-align: end;
+}
