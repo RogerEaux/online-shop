@@ -14,14 +14,21 @@
 
 .slogan {
   grid-area: slogan;
-  display: flex;
-  flex-direction: column;
   font-weight: 300;
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .slogan span {
-  text-align: end;
+  display: block;
+  text-align: center;
+}
+
+.slogan span:nth-of-type(2) {
+  text-align: start;
+}
+
+.slogan strong {
+  font-size: 6rem;
 }
 
 .quote {

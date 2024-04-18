@@ -7,12 +7,12 @@ function Banner() {
   return (
     <header className={styles.banner}>
       <h1 className={styles.slogan} aria-label="slogan">
-        See into
+        <span>See into</span>
         <span>
           <strong> the future, </strong>
         </span>
-        use it
         <span>
+          use it
           <strong> now</strong>
         </span>
       </h1>
