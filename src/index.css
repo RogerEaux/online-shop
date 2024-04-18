@@ -6,9 +6,9 @@
 :root {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 
-  --primary: #101020;
+  --primary: #202040;
   --invert: #efefff;
-  --secondary: #201810;
+  --secondary: #403020;
   --idle: darkgray;
 
   background-color: var(--invert);
