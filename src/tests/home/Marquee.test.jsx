@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Marquee from '../components/Marquee';
+import Marquee from '../../components/home/Marquee';
 
 describe('NavBar component', () => {
   it("renders four paragraphs containing 'The Future is Now is'", () => {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import future from '../assets/images/future.jpg';
-import rightArrow from '../assets/svg/right-arrow.svg';
-import styles from '../styles/Banner.module.css';
+import future from '../../assets/images/future.jpg';
+import rightArrow from '../../assets/svg/right-arrow.svg';
+import styles from '../../styles/home/Banner.module.css';
 
 function Banner() {
   return (

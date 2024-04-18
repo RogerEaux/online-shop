@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import styles from '../styles/CatAd.module.css';
+import styles from '../../styles/home/CatAd.module.css';
 import { Link } from 'react-router-dom';
 
 function CatAd({ title, description, cover, reverse }) {
   function getImageURL() {
-    return new URL(`../assets/images/${cover}`, import.meta.url).href;
+    return new URL(`../../assets/images/${cover}`, import.meta.url).href;
   }
 
   return (

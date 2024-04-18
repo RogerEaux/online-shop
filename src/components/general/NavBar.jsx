@@ -1,9 +1,9 @@
 import Links from './Links';
 import SearchBar from './SearchBar';
-import logo from '../assets/svg/logo.svg';
-import cart from '../assets/svg/cart.svg';
+import logo from '../../assets/svg/logo.svg';
+import cart from '../../assets/svg/cart.svg';
 import { Link } from 'react-router-dom';
-import styles from '../styles/NavBar.module.css';
+import styles from '../../styles/general/NavBar.module.css';
 
 function NavBar() {
   return (

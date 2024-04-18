@@ -1,8 +1,8 @@
-import NavBar from './NavBar';
+import NavBar from '../general/NavBar';
 import Banner from './Banner';
 import Marquee from './Marquee';
 import Main from './Main';
-import Footer from './Footer';
+import Footer from '../general/Footer';
 
 function Home() {
   return (

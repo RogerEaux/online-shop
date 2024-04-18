@@ -1,5 +1,5 @@
 import CatAd from './CatAd';
-import styles from '../styles/Main.module.css';
+import styles from '../../styles/home/Main.module.css';
 
 function Main() {
   return (

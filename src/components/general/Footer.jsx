@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import github from '../assets/svg/github.svg';
+import github from '../../assets/svg/github.svg';
 import Links from './Links';
-import styles from '../styles/Footer.module.css';
+import styles from '../../styles/general/Footer.module.css';
 
 function Footer() {
   return (

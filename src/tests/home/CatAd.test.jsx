@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import CatAd from '../components/CatAd';
+import CatAd from '../../components/home/CatAd';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('CatAd component', () => {

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from '../styles/Links.module.css';
+import styles from '../../styles/general/Links.module.css';
 import { Link } from 'react-router-dom';
 
 function Links({ column }) {

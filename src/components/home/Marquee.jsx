@@ -1,4 +1,4 @@
-import styles from '../styles/Marquee.module.css';
+import styles from '../../styles/home/Marquee.module.css';
 
 function Marquee() {
   return (

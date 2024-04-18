@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Banner from '../components/Banner';
+import Banner from '../../components/home/Banner';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('Banner component', () => {
