@@ -14,6 +14,7 @@
 
 .slogan {
   grid-area: slogan;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 5rem;
 }

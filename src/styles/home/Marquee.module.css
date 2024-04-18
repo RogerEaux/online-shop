@@ -5,15 +5,16 @@
   height: 10vw;
   user-select: none;
   overflow: hidden;
-  gap: 8px;
+  gap: 16px;
   padding: 16px 0;
   background-color: var(--primary);
   color: var(--invert);
 }
 
 .marquee p {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-size: 6vw;
-  font-weight: 800;
+  font-weight: 700;
   text-wrap: nowrap;
   animation: scroll 4s linear infinite;
 }
