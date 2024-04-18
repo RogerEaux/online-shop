@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Banner from '../../components/home/Banner';
 import { BrowserRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
 
 describe('Banner component', () => {
   it('renders heading with company slogan ', () => {

@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Links from '../../components/general/Links';
 import { BrowserRouter } from 'react-router-dom';
-import { it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 describe('Links component', () => {
   it('renders a list of links', () => {

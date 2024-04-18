@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import NavBar from '../../components/general/NavBar';
 import { BrowserRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
 
 describe('NavBar component', () => {
   it("renders logo of 'The Company'", () => {

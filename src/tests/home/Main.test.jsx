@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Main from '../../components/home/Main';
 import { BrowserRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
 
 describe('Main component', () => {
   it('renders heading containing an ad message ', () => {

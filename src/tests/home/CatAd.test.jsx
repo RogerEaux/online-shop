@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import CatAd from '../../components/home/CatAd';
 import { BrowserRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
 
 describe('CatAd component', () => {
   it('renders a section with a heading, image and description', () => {
