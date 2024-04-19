@@ -1,6 +1,8 @@
+import styles from '../../styles/shop/Sorter.module.css';
+
 function Sorter() {
   return (
-    <>
+    <div className={styles.sorter}>
       <label htmlFor="sort">Sort by</label>
       <select name="sort" id="sort">
         <option value="">Popularity</option>
@@ -9,7 +11,7 @@ function Sorter() {
         <option value="atoz">A to Z</option>
         <option value="ztoa">Z to A</option>
       </select>
-    </>
+    </div>
   );
 }
 

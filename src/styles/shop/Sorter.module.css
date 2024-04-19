@@ -1,0 +1,18 @@
+.sorter label {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.sorter select {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+  border: 2px solid var(--idle);
+  border-radius: 5px;
+}
+
+.sorter select:focus {
+  transition: all 0.5s ease;
+  border: 2px solid var(--secondary);
+}
