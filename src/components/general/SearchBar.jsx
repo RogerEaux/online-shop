@@ -4,7 +4,7 @@ import styles from '../../styles/general/SearchBar.module.css';
 function SearchBar() {
   return (
     <>
-      <label className={styles.search}>
+      <label className={styles.search} aria-label="search">
         <input
           className={styles.searchBox}
           type="text"
