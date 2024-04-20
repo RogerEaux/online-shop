@@ -2,6 +2,7 @@ import fullStar from '../../assets/svg/full-star.svg';
 import halfStar from '../../assets/svg/half-star.svg';
 import emptyStar from '../../assets/svg/empty-star.svg';
 import PropTypes from 'prop-types';
+import styles from '../../styles/general/Rating.module.css';
 
 function Rating({ rating }) {
   let full = Math.floor(rating.rate);
@@ -21,8 +22,8 @@ function Rating({ rating }) {
   }
 
   return (
-    <div>
-      <div>
+    <div className={styles.rating}>
+      <div className={styles.stars}>
         {stars.map((star, index) => {
           return star === 'full' ? (
             <img key={index} src={fullStar} alt="" />

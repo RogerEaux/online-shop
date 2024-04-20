@@ -1,0 +1,13 @@
+.rating {
+  display: flex;
+  padding: 16px;
+}
+
+.stars {
+  margin-right: 8px;
+}
+
+.stars img {
+  height: 16px;
+  width: auto;
+}
