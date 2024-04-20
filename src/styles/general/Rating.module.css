@@ -1,6 +1,5 @@
 .rating {
   display: flex;
-  padding: 16px;
 }
 
 .stars {
@@ -10,4 +9,7 @@
 .stars img {
   height: 16px;
   width: auto;
+}
+.rating p span {
+  color: var(--idle);
 }

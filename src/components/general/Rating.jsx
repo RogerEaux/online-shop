@@ -35,7 +35,7 @@ function Rating({ rating }) {
         })}
       </div>
       <p>
-        {rating.rate} ({rating.count})
+        {rating.rate} <span>({rating.count})</span>
       </p>
     </div>
   );
