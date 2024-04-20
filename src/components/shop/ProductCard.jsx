@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
+import Rating from '../general/Rating';
+import styles from '../../styles/shop/ProductCard.module.css';
+import { Link } from 'react-router-dom';
 
 function ProductCard({ product }) {
   return (
-    <section>
+    <Link to={'/'} className={styles.product}>
       <img src={product.image} alt="product image" />
       <h2 aria-label="title">{product.title}</h2>
+      <Rating rating={product.rating} />
       <p>${product.price}</p>
-    </section>
+    </Link>
   );
 }
 
