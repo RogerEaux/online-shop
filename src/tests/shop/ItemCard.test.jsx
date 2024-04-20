@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import ProductCard from '../../components/shop/ProductCard';
+import ItemCard from '../../components/shop/ItemCard';
 import { describe, expect, it } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
 
-describe('ProductCard component', () => {
-  it('renders product image', () => {
-    const product = {
+describe('ItemCard component', () => {
+  it('renders item image', () => {
+    const item = {
       title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ',
       price: 64,
       image: 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg',
@@ -17,17 +17,17 @@ describe('ProductCard component', () => {
 
     render(
       <BrowserRouter>
-        <ProductCard product={product} />
+        <ItemCard item={item} />
       </BrowserRouter>,
     );
 
     expect(
-      screen.getByRole('img', { name: /product image/i }),
+      screen.getByRole('img', { name: /item image/i }),
     ).toBeInTheDocument();
   });
 
-  it('renders product title', () => {
-    const product = {
+  it('renders item title', () => {
+    const item = {
       title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ',
       price: 64,
       image: 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg',
@@ -39,17 +39,17 @@ describe('ProductCard component', () => {
 
     render(
       <BrowserRouter>
-        <ProductCard product={product} />
+        <ItemCard item={item} />
       </BrowserRouter>,
     );
 
     expect(screen.getByRole('heading', { name: /title/i }).textContent).toMatch(
-      product.title,
+      item.title,
     );
   });
 
-  it('renders product price', () => {
-    const product = {
+  it('renders item price', () => {
+    const item = {
       title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ',
       price: 64,
       image: 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg',
@@ -61,12 +61,10 @@ describe('ProductCard component', () => {
 
     render(
       <BrowserRouter>
-        <ProductCard product={product} />
+        <ItemCard item={item} />
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByText(`$${product.price.toString()}`),
-    ).toBeInTheDocument();
+    expect(screen.getByText(`$${item.price.toString()}`)).toBeInTheDocument();
   });
 });
