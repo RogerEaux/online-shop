@@ -5,11 +5,10 @@ function ProductCard({ product }) {
     <section>
       <img src={product.image} alt="product image" />
       <h2 aria-label="title">{product.title}</h2>
+      <p>${product.price}</p>
     </section>
   );
 }
-
-export default ProductCard;
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
@@ -22,3 +21,5 @@ ProductCard.propTypes = {
     }),
   }),
 };
+
+export default ProductCard;
