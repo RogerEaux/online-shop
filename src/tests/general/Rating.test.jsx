@@ -11,7 +11,8 @@ describe('Rating component', () => {
 
     render(<Rating rating={rating} />);
 
-    expect(screen.getByText(`${rating.rate} (${rating.count})`));
+    expect(screen.getByText(`${rating.rate}`)).toBeInTheDocument();
+    expect(screen.getByText(`(${rating.count})`)).toBeInTheDocument();
   });
 
   it('renders rate stars', () => {
