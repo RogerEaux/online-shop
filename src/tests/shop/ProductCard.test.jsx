@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ProductCard from '../../components/shop/ProductCard';
 import { describe, expect, it } from 'vitest';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('ProductCard component', () => {
   it('renders product image', () => {
@@ -14,7 +15,11 @@ describe('ProductCard component', () => {
       },
     };
 
-    render(<ProductCard product={product} />);
+    render(
+      <BrowserRouter>
+        <ProductCard product={product} />
+      </BrowserRouter>,
+    );
 
     expect(
       screen.getByRole('img', { name: /product image/i }),
@@ -32,7 +37,11 @@ describe('ProductCard component', () => {
       },
     };
 
-    render(<ProductCard product={product} />);
+    render(
+      <BrowserRouter>
+        <ProductCard product={product} />
+      </BrowserRouter>,
+    );
 
     expect(screen.getByRole('heading', { name: /title/i }).textContent).toMatch(
       product.title,
@@ -50,7 +59,11 @@ describe('ProductCard component', () => {
       },
     };
 
-    render(<ProductCard product={product} />);
+    render(
+      <BrowserRouter>
+        <ProductCard product={product} />
+      </BrowserRouter>,
+    );
 
     expect(
       screen.getByText(`$${product.price.toString()}`),
