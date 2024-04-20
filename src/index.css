@@ -14,7 +14,8 @@
   --primary: #202040;
   --invert: #efefff;
   --secondary: #403020;
-  --idle: #696969;
+  --idle: #a9a9a9;
+  --idle-dark: #565656;
 
   background-color: var(--invert);
 }
