@@ -8,10 +8,6 @@ describe('ProductCard component', () => {
       title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ',
       price: 64,
       image: 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg',
-      rating: {
-        rate: 3.3,
-        count: 203,
-      },
     };
 
     render(<ProductCard product={product} />);
@@ -19,5 +15,19 @@ describe('ProductCard component', () => {
     expect(
       screen.getByRole('img', { name: /product image/i }),
     ).toBeInTheDocument();
+  });
+
+  it('renders product title', () => {
+    const product = {
+      title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ',
+      price: 64,
+      image: 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg',
+    };
+
+    render(<ProductCard product={product} />);
+
+    expect(screen.getByRole('heading', { name: /title/i }).textContent).toMatch(
+      product.title,
+    );
   });
 });
