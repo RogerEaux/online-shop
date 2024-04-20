@@ -34,7 +34,7 @@ function Rating({ rating }) {
           );
         })}
       </div>
-      <p>
+      <p aria-label="rating">
         {rating.rate} <span>({rating.count})</span>
       </p>
     </div>
