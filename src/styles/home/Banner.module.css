@@ -36,6 +36,7 @@
   grid-area: quote;
   font-weight: 300;
   font-size: 1.5rem;
+  color: black;
 }
 
 .shop {
@@ -54,7 +55,7 @@
   font-size: 2rem;
   cursor: pointer;
   background-color: var(--invert);
-  color: inherit;
+  color: black;
   padding: 16px;
   border: 2px solid var(--idle);
   border-radius: 5px;

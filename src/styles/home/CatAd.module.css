@@ -21,7 +21,7 @@
 .cover {
   background-color: var(--invert);
   border-radius: 5%;
-  box-shadow: 0px 0px 8px var(--primary);
+  box-shadow: 0px 0px 4px var(--primary);
 }
 
 .cover > img {
@@ -42,12 +42,13 @@
   transform-origin: left;
   transform: rotateY(-90deg);
   transition: all 0.5s ease;
+  color: black;
 }
 
 .info > h2 {
   font-size: 2.5rem;
   padding: 32px;
-  border-bottom: 6px solid var(--primary);
+  border-bottom: 6px solid black;
 }
 
 .info > h3 {
