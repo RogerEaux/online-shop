@@ -13,4 +13,15 @@ describe('Rating component', () => {
 
     expect(screen.getByText(`${rating.rate} (${rating.count})`));
   });
+
+  it('renders rate stars', () => {
+    const rating = {
+      rate: 3.3,
+      count: 203,
+    };
+
+    render(<Rating rating={rating} />);
+
+    expect(screen.getAllByRole('img').length).toBe(5);
+  });
 });
