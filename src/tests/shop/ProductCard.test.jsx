@@ -30,4 +30,18 @@ describe('ProductCard component', () => {
       product.title,
     );
   });
+
+  it('renders product price', () => {
+    const product = {
+      title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ',
+      price: 64,
+      image: 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg',
+    };
+
+    render(<ProductCard product={product} />);
+
+    expect(
+      screen.getByText(`$${product.price.toString()}`),
+    ).toBeInTheDocument();
+  });
 });
