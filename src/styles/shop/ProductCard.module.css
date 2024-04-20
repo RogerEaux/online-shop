@@ -1,0 +1,27 @@
+.product {
+  display: grid;
+  grid-template-rows: 25vh max-content 1fr max-content;
+  max-width: 25vw;
+  height: 45vh;
+  padding: 8px;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.product > img {
+  height: 25vh;
+  width: 100%;
+  object-fit: contain;
+}
+
+.product h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.product > p {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
