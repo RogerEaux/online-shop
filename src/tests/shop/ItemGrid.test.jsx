@@ -68,4 +68,16 @@ describe('ItemGrid component', () => {
     expect(screen.getAllByRole('link')[1].textContent).toMatch('baz');
     expect(screen.getAllByRole('link')[2].textContent).toMatch('foo');
   });
+
+  it('renders items sorted alphabetically Z to A', async () => {
+    const user = userEvent.setup();
+
+    render(<ItemGrid items={items} />);
+
+    await user.selectOptions(screen.getByRole('combobox'), 'Z to A');
+
+    expect(screen.getAllByRole('link')[0].textContent).toMatch('foo');
+    expect(screen.getAllByRole('link')[1].textContent).toMatch('baz');
+    expect(screen.getAllByRole('link')[2].textContent).toMatch('bar');
+  });
 });
