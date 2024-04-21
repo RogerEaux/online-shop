@@ -44,4 +44,16 @@ describe('ItemGrid component', () => {
     expect(screen.getAllByRole('link')[1].textContent).toMatch('2');
     expect(screen.getAllByRole('link')[2].textContent).toMatch('3');
   });
+
+  it('renders items sorted by high to low price', async () => {
+    const user = userEvent.setup();
+
+    render(<ItemGrid items={items} />);
+
+    await user.selectOptions(screen.getByRole('combobox'), 'Price High to Low');
+
+    expect(screen.getAllByRole('link')[0].textContent).toMatch('3');
+    expect(screen.getAllByRole('link')[1].textContent).toMatch('2');
+    expect(screen.getAllByRole('link')[2].textContent).toMatch('1');
+  });
 });
