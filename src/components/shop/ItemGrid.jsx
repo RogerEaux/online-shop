@@ -26,8 +26,13 @@ function ItemGrid({ items }) {
     });
   }
 
+  function sortByTitleAToZ(items) {
+    items.sort((a, b) => a.title.localeCompare(b.title));
+  }
+
   if (sortOption === 'priceltoh') sortByPriceLowToHigh(items);
   if (sortOption === 'pricehtol') sortByPriceHighToLow(items);
+  if (sortOption === 'atoz') sortByTitleAToZ(items);
 
   return (
     <article>
