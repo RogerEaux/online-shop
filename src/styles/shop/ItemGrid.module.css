@@ -1,0 +1,21 @@
+.itemGrid {
+  width: 80vw;
+  display: grid;
+  grid-template:
+    'number sorter'
+    'items items';
+  align-items: center;
+  padding: 64px 0;
+}
+
+.itemGrid > p {
+  font-size: 1rem;
+  padding: 16px;
+}
+
+.items {
+  grid-area: items;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}

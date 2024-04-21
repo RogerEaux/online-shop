@@ -1,3 +1,8 @@
+.sorter {
+  justify-self: end;
+  padding: 16px;
+}
+
 .sorter label {
   font-size: 1rem;
   margin-right: 8px;

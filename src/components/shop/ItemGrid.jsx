@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import ItemCard from './ItemCard';
 import Sorter from './Sorter';
 import { useState } from 'react';
+import styles from '../../styles/shop/ItemGrid.module.css';
 
 function ItemGrid({ items }) {
   const [sortOption, setSortOption] = useState('popular');
@@ -49,12 +50,14 @@ function ItemGrid({ items }) {
   if (sortOption === 'ztoa') sortByTitleZToA(items);
 
   return (
-    <article>
+    <article className={styles.itemGrid}>
       <p>{items.length} items</p>
       <Sorter updateOption={updateOption} />
-      {items.map((item) => {
-        return <ItemCard key={item.id} item={item} />;
-      })}
+      <div className={styles.items}>
+        {items.map((item) => {
+          return <ItemCard key={item.id} item={item} />;
+        })}
+      </div>
     </article>
   );
 }

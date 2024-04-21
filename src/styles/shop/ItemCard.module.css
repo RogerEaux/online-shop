@@ -1,9 +1,8 @@
 .item {
   display: grid;
   grid-template-rows: 25vh max-content 1fr max-content;
-  max-width: 25vw;
-  height: 45vh;
-  padding: 8px;
+  height: 50vh;
+  padding: 16px;
   gap: 8px;
   cursor: pointer;
   text-decoration: none;
@@ -11,8 +10,8 @@
 }
 
 .item > img {
+  justify-self: center;
   height: 25vh;
-  width: 100%;
   object-fit: contain;
   padding: 16px;
 }
