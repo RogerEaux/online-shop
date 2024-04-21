@@ -17,6 +17,12 @@ const items = [
 ];
 
 describe('ItemGrid component', () => {
+  it('renders number of items displayed', () => {
+    render(<ItemGrid items={items} />);
+
+    expect(screen.getByText(`${items.length} items`)).toBeInTheDocument();
+  });
+
   it('renders grid of items', () => {
     render(<ItemGrid items={items} />);
 
