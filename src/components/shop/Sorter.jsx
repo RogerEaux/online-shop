@@ -1,10 +1,11 @@
 import styles from '../../styles/shop/Sorter.module.css';
+import PropTypes from 'prop-types';
 
-function Sorter() {
+function Sorter({ updateOption }) {
   return (
     <div className={styles.sorter}>
       <label htmlFor="sort">Sort by</label>
-      <select name="sort" id="sort">
+      <select name="sort" id="sort" onChange={updateOption}>
         <option value="">Popularity</option>
         <option value="priceltoh">Price Low to High</option>
         <option value="pricelhtol">Price High to Low</option>
@@ -14,5 +15,9 @@ function Sorter() {
     </div>
   );
 }
+
+Sorter.propTypes = {
+  updateOption: PropTypes.func,
+};
 
 export default Sorter;
