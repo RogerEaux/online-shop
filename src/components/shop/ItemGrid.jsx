@@ -4,6 +4,7 @@ import ItemCard from './ItemCard';
 function ItemGrid({ items }) {
   return (
     <article>
+      <p>{items.length} items</p>
       {items.map((item) => {
         return <ItemCard key={item.id} item={item} />;
       })}
