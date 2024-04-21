@@ -4,10 +4,18 @@ import Sorter from './Sorter';
 import { useState } from 'react';
 
 function ItemGrid({ items }) {
-  const [sortOption, setSortOption] = useState('');
+  const [sortOption, setSortOption] = useState('popular');
 
   function updateOption(e) {
     setSortOption(e.target.value);
+  }
+
+  function sortByRate(items) {
+    items.sort((a, b) => {
+      if (a.rating.rate < b.rating.rate) return 1;
+      if (a.rating.rate > b.rating.rate) return -1;
+      return 0;
+    });
   }
 
   function sortByPriceLowToHigh(items) {
@@ -34,6 +42,7 @@ function ItemGrid({ items }) {
     items.sort((a, b) => b.title.localeCompare(a.title));
   }
 
+  if (sortOption === 'popular') sortByRate(items);
   if (sortOption === 'priceltoh') sortByPriceLowToHigh(items);
   if (sortOption === 'pricehtol') sortByPriceHighToLow(items);
   if (sortOption === 'atoz') sortByTitleAToZ(items);
