@@ -30,9 +30,14 @@ function ItemGrid({ items }) {
     items.sort((a, b) => a.title.localeCompare(b.title));
   }
 
+  function sortByTitleZToA(items) {
+    items.sort((a, b) => b.title.localeCompare(a.title));
+  }
+
   if (sortOption === 'priceltoh') sortByPriceLowToHigh(items);
   if (sortOption === 'pricehtol') sortByPriceHighToLow(items);
   if (sortOption === 'atoz') sortByTitleAToZ(items);
+  if (sortOption === 'ztoa') sortByTitleZToA(items);
 
   return (
     <article>
