@@ -1,10 +1,29 @@
 import PropTypes from 'prop-types';
 import ItemCard from './ItemCard';
+import Sorter from './Sorter';
+import { useState } from 'react';
 
 function ItemGrid({ items }) {
+  const [sortOption, setSortOption] = useState('');
+
+  function updateOption(e) {
+    setSortOption(e.target.value);
+  }
+
+  function sortByPriceLowToHigh(items) {
+    items.sort((a, b) => {
+      if (a.price < b.price) return -1;
+      if (a.price > b.price) return 1;
+      return 0;
+    });
+  }
+
+  if (sortOption === 'priceltoh') sortByPriceLowToHigh(items);
+
   return (
     <article>
       <p>{items.length} items</p>
+      <Sorter updateOption={updateOption} />
       {items.map((item) => {
         return <ItemCard key={item.id} item={item} />;
       })}
