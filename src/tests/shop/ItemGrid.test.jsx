@@ -13,9 +13,9 @@ vi.mock('../../components/shop/ItemCard', () => ({
 }));
 
 const items = [
-  { id: 1, title: 'foo', price: 3 },
-  { id: 2, title: 'bar', price: 1 },
-  { id: 3, title: 'baz', price: 2 },
+  { id: 1, title: 'foo', price: 3, rating: 3 },
+  { id: 2, title: 'bar', price: 1, rating: 1 },
+  { id: 3, title: 'baz', price: 2, rating: 5 },
 ];
 
 describe('ItemGrid component', () => {
@@ -78,6 +78,18 @@ describe('ItemGrid component', () => {
 
     expect(screen.getAllByRole('link')[0].textContent).toMatch('foo');
     expect(screen.getAllByRole('link')[1].textContent).toMatch('baz');
+    expect(screen.getAllByRole('link')[2].textContent).toMatch('bar');
+  });
+
+  it('renders items sorted by rating', async () => {
+    const user = userEvent.setup();
+
+    render(<ItemGrid items={items} />);
+
+    await user.selectOptions(screen.getByRole('combobox'), 'Popular');
+
+    expect(screen.getAllByRole('link')[0].textContent).toMatch('baz');
+    expect(screen.getAllByRole('link')[1].textContent).toMatch('foo');
     expect(screen.getAllByRole('link')[2].textContent).toMatch('bar');
   });
 });
