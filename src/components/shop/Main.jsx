@@ -1,28 +1,19 @@
-import PropTypes from 'prop-types';
+import useFetchItems from '../../utils/useFetchItems';
+import ItemGrid from './ItemGrid';
+import { useState } from 'react';
 
-function Main({ items }) {
+function Main() {
+  const [url, setURL] = useState('https://fakestoreapi.com/products');
+  const { items, loading, error } = useFetchItems(url);
+
+  if (loading) return <p>Loading</p>;
+  if (error) return <p>Error</p>;
+
   return (
     <main>
-      <p>{items.length} items</p>
+      <ItemGrid items={items} />
     </main>
   );
 }
 
 export default Main;
-
-Main.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      price: PropTypes.number,
-      description: PropTypes.string,
-      category: PropTypes.string,
-      image: PropTypes.string,
-      rating: PropTypes.shape({
-        rate: PropTypes.number,
-        count: PropTypes.number,
-      }),
-    }),
-  ),
-};
