@@ -13,9 +13,9 @@ vi.mock('../../components/shop/ItemCard', () => ({
 }));
 
 const items = [
-  { id: 1, title: 'foo', price: 3, rating: 3 },
-  { id: 2, title: 'bar', price: 1, rating: 1 },
-  { id: 3, title: 'baz', price: 2, rating: 5 },
+  { id: 1, title: 'foo', price: 3, rating: { rate: 3 } },
+  { id: 2, title: 'bar', price: 1, rating: { rate: 1 } },
+  { id: 3, title: 'baz', price: 2, rating: { rate: 5 } },
 ];
 
 describe('ItemGrid component', () => {
