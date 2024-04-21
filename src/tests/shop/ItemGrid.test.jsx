@@ -25,12 +25,16 @@ describe('ItemGrid component', () => {
     expect(screen.getByText(`${items.length} items`)).toBeInTheDocument();
   });
 
-  it('renders grid of items', () => {
+  it('renders items sorted by rating', async () => {
+    const user = userEvent.setup();
+
     render(<ItemGrid items={items} />);
 
-    expect(screen.getAllByRole('link')[0].textContent).toMatch('foo');
-    expect(screen.getAllByRole('link')[1].textContent).toMatch('bar');
-    expect(screen.getAllByRole('link')[2].textContent).toMatch('baz');
+    await user.selectOptions(screen.getByRole('combobox'), 'Popular');
+
+    expect(screen.getAllByRole('link')[0].textContent).toMatch('baz');
+    expect(screen.getAllByRole('link')[1].textContent).toMatch('foo');
+    expect(screen.getAllByRole('link')[2].textContent).toMatch('bar');
   });
 
   it('renders items sorted by low to high price', async () => {
@@ -78,18 +82,6 @@ describe('ItemGrid component', () => {
 
     expect(screen.getAllByRole('link')[0].textContent).toMatch('foo');
     expect(screen.getAllByRole('link')[1].textContent).toMatch('baz');
-    expect(screen.getAllByRole('link')[2].textContent).toMatch('bar');
-  });
-
-  it('renders items sorted by rating', async () => {
-    const user = userEvent.setup();
-
-    render(<ItemGrid items={items} />);
-
-    await user.selectOptions(screen.getByRole('combobox'), 'Popular');
-
-    expect(screen.getAllByRole('link')[0].textContent).toMatch('baz');
-    expect(screen.getAllByRole('link')[1].textContent).toMatch('foo');
     expect(screen.getAllByRole('link')[2].textContent).toMatch('bar');
   });
 });
