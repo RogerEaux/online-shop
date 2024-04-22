@@ -1,0 +1,26 @@
+.main {
+  width: 100%;
+  display: grid;
+  grid-template: 'side main' / 20vw 1fr;
+  padding: 64px;
+}
+
+.categories > div {
+  position: sticky;
+  top: 128px;
+}
+
+.categories h2 {
+  margin-bottom: 32px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin: 256px;
+}
+
+.loading > img {
+  height: 128px;
+  width: auto;
+}

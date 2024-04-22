@@ -1,16 +1,14 @@
 .itemGrid {
-  width: 80vw;
   display: grid;
   grid-template:
     'number sorter'
     'items items';
   align-items: center;
-  padding: 64px 0;
+  gap: 32px;
 }
 
 .itemGrid > p {
   font-size: 1rem;
-  padding: 16px;
 }
 
 .items {

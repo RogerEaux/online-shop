@@ -4,21 +4,33 @@ import Categories from '../general/Categories';
 import ItemGrid from './ItemGrid';
 import loadingGIF from '../../assets/images/loading.gif';
 import RequestError from './RequestError';
+import styles from '../../styles/shop/Main.module.css';
 
 function Main() {
+  function retry() {
+    location.reload();
+  }
+
   const { url } = useURL();
   const { items, loading, error } = useFetchItems(url);
 
-  if (loading) return <img src={loadingGIF} alt="loading" />;
-  if (error) return <RequestError error={error} retry={location.reload} />;
+  if (loading)
+    return (
+      <div className={styles.loading}>
+        <img src={loadingGIF} alt="loading" />
+      </div>
+    );
+  if (error) return <RequestError error={error} retry={retry} />;
 
   return (
-    <main>
-      <ItemGrid items={items} />
-      <aside>
-        <h2>Categories</h2>
-        <Categories />
+    <main className={styles.main}>
+      <aside className={styles.categories}>
+        <div>
+          <h2>Categories</h2>
+          <Categories />
+        </div>
       </aside>
+      <ItemGrid items={items} />
     </main>
   );
 }
