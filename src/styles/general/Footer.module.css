@@ -44,8 +44,8 @@
 
 .links a:hover,
 .links a:focus {
-  color: inherit;
-  text-decoration: underline 2px var(--invert);
+  color: var(--invert);
+  transition: color 0.33s ease;
 }
 
 .author {
@@ -89,6 +89,6 @@
 
 .author :last-child > a:hover,
 .author :last-child > a:focus {
-  text-decoration: underline 2px solid var(--invert);
   color: var(--invert);
+  transition: color 0.33s ease;
 }

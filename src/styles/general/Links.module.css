@@ -14,10 +14,11 @@
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--secondary);
+  color: var(--idle-dark);
 }
 
 .linksItem > a:hover,
 .linksItem > a:focus {
-  text-decoration: underline 2px var(--secondary);
+  color: var(--secondary);
+  transition: color 0.33s ease;
 }
