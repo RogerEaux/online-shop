@@ -8,6 +8,8 @@ function useFetchItems(url) {
   useEffect(() => {
     const controller = new AbortController();
 
+    setLoading(true);
+
     fetch(url, { signal: controller.signal })
       .then((response) => {
         if (response.status >= 400) {
