@@ -10,9 +10,10 @@ function Footer() {
       <div className={styles.about}>
         <h1 aria-label="about">ABOUT THE COMPANY</h1>
         <p>
-          The Company is an online tech commerce seller. Our goal is to inspire
-          people to use and take advantage of recent technologies. The Company
-          offers some of the top and cutting-edge technology.
+          The Company is an online commerce seller. Our goal is to inspire
+          through our modern and trendy products. The Company offers top-quality
+          and some of the most recent in everything from electronics, clothes
+          and jewelery.
         </p>
       </div>
       <div className={styles.categories}>

@@ -15,7 +15,7 @@ describe('Footer component', () => {
       /About The Company/i,
     );
     expect(
-      screen.getByText(/The Company is an online tech commerce seller./i),
+      screen.getByText(/The Company is an online commerce seller./i),
     ).toBeInTheDocument();
   });
 
