@@ -1,8 +1,8 @@
 .footer {
   display: grid;
   grid-template:
-    'about links'
-    'author author' / 3fr 2fr;
+    'about categories links'
+    'author author author' / 2fr 1fr 1fr;
   align-items: start;
   padding: 64px;
   background-color: var(--primary);
@@ -28,6 +28,12 @@
   justify-self: end;
 }
 
+.categories {
+  grid-area: categories;
+  justify-self: end;
+}
+
+.categories h2,
 .links h2 {
   font-size: 1.6rem;
   margin-bottom: 32px;
@@ -38,10 +44,13 @@
   gap: 32px;
 }
 
+.categories a,
 .links a {
   color: var(--idle);
 }
 
+.categories a:hover,
+.categories a:focus,
 .links a:hover,
 .links a:focus {
   color: var(--invert);
@@ -55,7 +64,7 @@
   justify-content: space-between;
   width: 100%;
   font-size: 1.1rem;
-  margin-top: 128px;
+  margin-top: 64px;
   color: var(--idle);
 }
 

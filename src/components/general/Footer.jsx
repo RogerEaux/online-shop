@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import github from '../../assets/svg/github.svg';
 import Links from './Links';
+import Categories from './Categories';
 import styles from '../../styles/general/Footer.module.css';
 
 function Footer() {
@@ -13,6 +14,10 @@ function Footer() {
           people to use and take advantage of recent technologies. The Company
           offers some of the top and cutting-edge technology.
         </p>
+      </div>
+      <div className={styles.categories}>
+        <h2>SHOP</h2>
+        <Categories />
       </div>
       <div className={styles.links}>
         <h2>EXPLORE</h2>
