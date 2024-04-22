@@ -14,14 +14,6 @@ function Main() {
   const { url } = useURL();
   const { items, loading, error } = useFetchItems(url);
 
-  if (loading)
-    return (
-      <div className={styles.loading}>
-        <img src={loadingGIF} alt="loading" />
-      </div>
-    );
-  if (error) return <RequestError error={error} retry={retry} />;
-
   return (
     <main className={styles.main}>
       <aside className={styles.categories}>
@@ -30,7 +22,15 @@ function Main() {
           <Categories />
         </div>
       </aside>
-      <ItemGrid items={items} />
+      {loading ? (
+        <div className={styles.loading}>
+          <img src={loadingGIF} alt="loading" />
+        </div>
+      ) : error ? (
+        <RequestError error={error} retry={retry} />
+      ) : (
+        <ItemGrid items={items} />
+      )}
     </main>
   );
 }

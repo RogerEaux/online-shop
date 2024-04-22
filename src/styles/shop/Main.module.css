@@ -17,7 +17,7 @@
 .loading {
   display: flex;
   justify-content: center;
-  margin: 256px;
+  margin: 128px;
 }
 
 .loading > img {
