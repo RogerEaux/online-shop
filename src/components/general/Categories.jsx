@@ -4,6 +4,9 @@ function Categories() {
   return (
     <ul>
       <li>
+        <Link to={'/shop'}>All Categories</Link>
+      </li>
+      <li>
         <Link to={'/shop/electronics'}>Electronics</Link>
       </li>
       <li>

@@ -13,6 +13,7 @@ describe('Categories component', () => {
 
     expect(screen.getByRole('list')).toBeInTheDocument();
     expect(screen.getByRole('list')).toContainElement(
+      screen.getByRole('link', { name: /all categories/i }),
       screen.getByRole('link', { name: /electronics/i }),
       screen.getByRole('link', { name: /jewelery/i }),
       screen.getByRole('link', { name: /^men's clothing/i }),
