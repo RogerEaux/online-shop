@@ -1,9 +1,10 @@
 import useFetchItems from '../../utils/useFetchItems';
+import useURL from '../../utils/useURL';
+import Categories from '../general/Categories';
 import ItemGrid from './ItemGrid';
-import { useState } from 'react';
 
 function Main() {
-  const [url, setURL] = useState('https://fakestoreapi.com/products');
+  const { url } = useURL();
   const { items, loading, error } = useFetchItems(url);
 
   if (loading) return <p>Loading</p>;
@@ -12,6 +13,9 @@ function Main() {
   return (
     <main>
       <ItemGrid items={items} />
+      <aside>
+        <Categories />
+      </aside>
     </main>
   );
 }

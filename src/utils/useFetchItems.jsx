@@ -6,7 +6,9 @@ function useFetchItems(url) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(url, { mode: 'cors' })
+    const controller = new AbortController();
+
+    fetch(url, { signal: controller.signal })
       .then((response) => {
         if (response.status >= 400) {
           throw new Error('Server Error');
@@ -14,8 +16,16 @@ function useFetchItems(url) {
         return response.json();
       })
       .then((response) => setItems(response))
-      .catch((error) => setError(error))
+      .catch((error) => {
+        if (error.name !== 'AbortError') {
+          setError(error);
+        }
+      })
       .finally(() => setLoading(false));
+
+    return () => {
+      controller.abort();
+    };
   }, [url]);
 
   return { items, loading, error };
