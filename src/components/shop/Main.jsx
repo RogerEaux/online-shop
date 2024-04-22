@@ -14,6 +14,7 @@ function Main() {
     <main>
       <ItemGrid items={items} />
       <aside>
+        <h2>Categories</h2>
         <Categories />
       </aside>
     </main>
