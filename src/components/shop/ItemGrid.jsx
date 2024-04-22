@@ -1,15 +1,11 @@
 import PropTypes from 'prop-types';
 import ItemCard from './ItemCard';
 import Sorter from './Sorter';
-import { useState } from 'react';
 import styles from '../../styles/shop/ItemGrid.module.css';
+import useSortItems from '../../utils/useSortItems';
 
 function ItemGrid({ items }) {
-  const [sortOption, setSortOption] = useState('popular');
-
-  function updateOption(e) {
-    setSortOption(e.target.value);
-  }
+  const { sortOption, updateOption } = useSortItems();
 
   function sortByRate(items) {
     items.sort((a, b) => {
