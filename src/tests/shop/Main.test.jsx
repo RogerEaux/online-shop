@@ -15,6 +15,12 @@ vi.mock('../../components/general/Categories', () => ({
 }));
 
 describe('Main component', () => {
+  it('renders loading screen when loading items', () => {
+    render(<Main />);
+
+    expect(screen.getByRole('img', { name: /loading/i }));
+  });
+
   it('renders aside with categories heading', async () => {
     render(<Main />);
 
