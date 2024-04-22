@@ -1,11 +1,12 @@
 .error {
   display: flex;
   flex-direction: column;
-  margin: 256px;
+  margin: 128px;
   align-items: center;
 }
 
 .error > h2 {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 32px;
 }
