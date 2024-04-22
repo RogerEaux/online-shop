@@ -7,7 +7,7 @@ describe('Banner component', () => {
     render(<Banner />);
 
     expect(
-      screen.getByRole('heading', { name: /tech store/i }).textContent,
-    ).toMatch('Tech Store');
+      screen.getByRole('heading', { name: /future store/i }).textContent,
+    ).toMatch('Future Store');
   });
 });
