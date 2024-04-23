@@ -2,10 +2,15 @@ import PropTypes from 'prop-types';
 import ItemCard from './ItemCard';
 import Sorter from './Sorter';
 import styles from '../../styles/shop/ItemGrid.module.css';
-import useSortItems from '../../utils/useSortItems';
+import { useSearchParams } from 'react-router-dom';
 
 function ItemGrid({ items }) {
-  const { sortOption, updateOption } = useSortItems();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const sortOption = searchParams.get('sort');
+
+  function updateOption(e) {
+    setSearchParams({ ...searchParams, sort: e.target.value });
+  }
 
   function sortByRate(items) {
     items.sort((a, b) => {
