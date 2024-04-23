@@ -1,9 +1,23 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-function useFetchItems(url) {
+function useFetchItems() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { category } = useParams();
+  const base = 'https://fakestoreapi.com/products';
+  let url = base;
+
+  if (category) {
+    if (category === 'mens-clothing') {
+      url = `${base}/category/men's clothing`;
+    } else if (category === 'womens-clothing') {
+      url = `${base}/category/women's clothing`;
+    } else {
+      url = `${base}/category/${category}`;
+    }
+  }
 
   useEffect(() => {
     const controller = new AbortController();

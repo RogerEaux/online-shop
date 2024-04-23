@@ -1,5 +1,4 @@
 import useFetchItems from '../../utils/useFetchItems';
-import useURL from '../../utils/useURL';
 import Categories from '../general/Categories';
 import ItemGrid from './ItemGrid';
 import loadingGIF from '../../assets/images/loading.gif';
@@ -11,8 +10,7 @@ function Main() {
     location.reload();
   }
 
-  const { url } = useURL();
-  const { items, loading, error } = useFetchItems(url);
+  const { items, loading, error } = useFetchItems();
 
   return (
     <main className={styles.main}>
