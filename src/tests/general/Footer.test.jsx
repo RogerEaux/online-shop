@@ -26,17 +26,30 @@ describe('Footer component', () => {
       </BrowserRouter>,
     );
 
-    expect(screen.getByText('© 2024 RogerEaux')).toBeInTheDocument();
+    expect(screen.getByText('© 2024')).toBeInTheDocument();
     expect(screen.getByText('Project made using')).toBeInTheDocument();
   });
 
-  it('renders GitHub link', () => {
+  it('renders GitHub repo link', () => {
     render(
       <BrowserRouter>
         <Footer />
       </BrowserRouter>,
     );
-    expect(screen.getByRole('link', { name: /github/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: /github repo/i }),
+    ).toBeInTheDocument();
+  });
+
+  it('renders GitHub user link', () => {
+    render(
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>,
+    );
+    expect(
+      screen.getByRole('link', { name: /rogereaux github/i }),
+    ).toBeInTheDocument();
   });
 
   it('renders FakeStore API link', () => {
