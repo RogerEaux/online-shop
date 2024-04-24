@@ -10,4 +10,10 @@ describe('ProductCard component', () => {
       screen.getByRole('img', { name: /product image/i }),
     ).toBeInTheDocument();
   });
+
+  it('renders item title', () => {
+    render(<ProductCard />);
+
+    expect(screen.getByRole('heading', { name: /title/i })).toBeInTheDocument();
+  });
 });
