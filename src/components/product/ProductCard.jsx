@@ -27,6 +27,7 @@ function ProductCard() {
             <Rating rating={product.rating} />
             <p>${product.price}</p>
             <h2 aria-label="description">{product.description}</h2>
+            <button>Add to Cart</button>
           </div>
         </>
       ) : null}
