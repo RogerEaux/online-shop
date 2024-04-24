@@ -8,17 +8,17 @@ function ProductCard() {
     location.reload();
   }
 
-  const { product, error } = useFetchProduct();
+  const { product, loading, error } = useFetchProduct();
 
   return (
     <main>
-      {!product ? (
+      {loading ? (
         <div>
           <img src={loadingGIF} alt="loading" />
         </div>
       ) : error ? (
         <RequestError error={error} retry={retry} />
-      ) : (
+      ) : product ? (
         <>
           <img src={product.image} alt="product image" />
           <h1 aria-label="title">{product.title}</h1>
@@ -26,7 +26,7 @@ function ProductCard() {
           <h2 aria-label="description">{product.description}</h2>
           <Rating rating={product.rating} />
         </>
-      )}
+      ) : null}
     </main>
   );
 }
