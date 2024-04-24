@@ -2,7 +2,7 @@ import useFetchCategory from '../../utils/useFetchCategory';
 import Categories from '../general/Categories';
 import ItemGrid from './ItemGrid';
 import loadingGIF from '../../assets/images/loading.gif';
-import RequestError from './RequestError';
+import RequestError from '../general/RequestError';
 import styles from '../../styles/shop/Main.module.css';
 
 function Main() {
