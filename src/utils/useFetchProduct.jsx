@@ -6,7 +6,7 @@ function useFetchProduct() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { productId } = useParams();
-  const url = `https://fakestoreapi.com/products/${productId}`;
+  const url = `https://fakestoreapi.com/products/${productId ? productId : 1}`;
 
   useEffect(() => {
     const controller = new AbortController();
