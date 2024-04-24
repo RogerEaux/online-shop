@@ -44,7 +44,7 @@ function ItemGrid({ items }) {
     items.sort((a, b) => b.title.localeCompare(a.title));
   }
 
-  if (sortOption === 'popular') sortByRate(items);
+  if (sortOption === 'popular' || !sortOption) sortByRate(items);
   if (sortOption === 'priceltoh') sortByPriceLowToHigh(items);
   if (sortOption === 'pricehtol') sortByPriceHighToLow(items);
   if (sortOption === 'atoz') sortByTitleAToZ(items);
