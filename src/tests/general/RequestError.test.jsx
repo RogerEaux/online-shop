@@ -7,7 +7,7 @@ describe('RequestError component', () => {
   it('renders error message', () => {
     const error = { message: 'Foo Error' };
 
-    render(<RequestError error={error} retry={() => {}} />);
+    render(<RequestError error={error} />);
 
     expect(screen.getByRole('heading', { name: /error/i }).textContent).toMatch(
       `Oops! Looks like ${error.message}`,
@@ -18,7 +18,7 @@ describe('RequestError component', () => {
     const action = vi.fn();
     const user = userEvent.setup();
 
-    render(<RequestError error={{}} action={action} actionButton={'Retry'} />);
+    render(<RequestError error={{}} action={action} />);
 
     expect(screen.getByRole('button', { name: /action/i })).toBeInTheDocument();
 
