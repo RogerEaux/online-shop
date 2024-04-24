@@ -44,15 +44,20 @@
   gap: 32px;
 }
 
-.categories a,
-.links a {
+.links ul a,
+.categories ul a,
+a {
+  font-weight: 700;
+  text-decoration: none;
   color: var(--idle);
 }
 
-.categories a:hover,
-.categories a:focus,
-.links a:hover,
-.links a:focus {
+.links ul a:hover,
+.links ul a:focus,
+.categories ul a:hover,
+.categories ul a:focus,
+.author a:hover,
+.author a:focus {
   color: var(--invert);
   transition: color 0.33s ease;
 }
@@ -71,6 +76,7 @@
 .author div {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .author div p {
@@ -87,20 +93,4 @@
 .author a:focus > img {
   transition: all 0.75s ease;
   transform: rotate(360deg) scale(1.2);
-}
-
-.author > :last-child {
-  text-align: end;
-}
-
-.author > :last-child > a {
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
-}
-
-.author :last-child > a:hover,
-.author :last-child > a:focus {
-  color: var(--invert);
-  transition: color 0.33s ease;
 }
