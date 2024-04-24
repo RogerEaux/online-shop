@@ -13,14 +13,3 @@
 .categories h2 {
   margin-bottom: 32px;
 }
-
-.loading {
-  display: flex;
-  justify-content: center;
-  margin: 128px;
-}
-
-.loading > img {
-  height: 128px;
-  width: auto;
-}
