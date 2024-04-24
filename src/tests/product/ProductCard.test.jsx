@@ -16,4 +16,10 @@ describe('ProductCard component', () => {
 
     expect(screen.getByRole('heading', { name: /title/i })).toBeInTheDocument();
   });
+
+  it('renders item price', () => {
+    render(<ProductCard />);
+
+    expect(screen.getByText(`$`)).toBeInTheDocument();
+  });
 });
