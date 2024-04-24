@@ -3,6 +3,12 @@ import ProductCard from '../../components/product/ProductCard';
 import { describe, expect, it } from 'vitest';
 
 describe('ProductCard component', () => {
+  it('renders loading screen when loading items', () => {
+    render(<ProductCard />);
+
+    expect(screen.getByRole('img', { name: /loading/i }));
+  });
+
   it('renders product image', async () => {
     render(<ProductCard />);
 
