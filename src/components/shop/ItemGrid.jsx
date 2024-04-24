@@ -54,11 +54,11 @@ function ItemGrid({ items }) {
     <article className={styles.itemGrid}>
       <p>{items.length} items</p>
       <Sorter updateOption={updateOption} />
-      <div className={styles.items}>
+      <section className={styles.items}>
         {items.map((item) => {
           return <ItemCard key={item.id} item={item} />;
         })}
-      </div>
+      </section>
     </article>
   );
 }
