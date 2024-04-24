@@ -1,0 +1,47 @@
+.productCard {
+  display: flex;
+  justify-content: center;
+  padding: 64px;
+}
+
+.image {
+  flex: 1;
+  height: 60vh;
+  width: 50vw;
+}
+
+.image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 64px;
+}
+
+.details > h1 {
+  font-size: 2rem;
+}
+
+.details > p {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding: 32px 0;
+}
+
+.details > h2 {
+  font-weight: 400;
+}
+
+.details div p {
+  font-size: 1.6rem;
+}
+
+.details > div > div > img {
+  height: 24px;
+}
