@@ -24,6 +24,7 @@ function ProductCard() {
           <h1 aria-label="title">{product.title}</h1>
           <p>${product.price}</p>
           <h2 aria-label="description">{product.description}</h2>
+          <Rating rating={product.rating} />
         </>
       )}
     </main>
