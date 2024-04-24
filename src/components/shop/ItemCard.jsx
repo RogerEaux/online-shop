@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom';
 
 function ItemCard({ item }) {
   return (
-    <Link to={'/'} className={styles.item} aria-label={item.title}>
+    <Link
+      to={`/product/${item.id}`}
+      className={styles.item}
+      aria-label={item.title}
+    >
       <img src={item.image} alt="item image" />
       <h2 aria-label="title">{item.title}</h2>
       <Rating rating={item.rating} />
@@ -16,6 +20,7 @@ function ItemCard({ item }) {
 
 ItemCard.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.number,
     title: PropTypes.string,
     price: PropTypes.number,
     image: PropTypes.string,
