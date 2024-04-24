@@ -1,4 +1,4 @@
-import useFetchItems from '../../utils/useFetchItems';
+import useFetchCategory from '../../utils/useFetchCategory';
 import Categories from '../general/Categories';
 import ItemGrid from './ItemGrid';
 import loadingGIF from '../../assets/images/loading.gif';
@@ -10,7 +10,7 @@ function Main() {
     location.reload();
   }
 
-  const { items, loading, error } = useFetchItems();
+  const { items, loading, error } = useFetchCategory();
 
   return (
     <main className={styles.main}>

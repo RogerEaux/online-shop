@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function useFetchItems() {
+function useFetchCategory() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -47,4 +47,4 @@ function useFetchItems() {
   return { items, loading, error };
 }
 
-export default useFetchItems;
+export default useFetchCategory;
