@@ -6,7 +6,8 @@
 
 .image {
   flex: 1;
-  height: 60vh;
+  align-self: center;
+  height: 70vh;
   width: 50vw;
 }
 
@@ -31,11 +32,37 @@
 .details > p {
   font-size: 2.2rem;
   font-weight: 700;
-  padding: 32px 0;
+  padding: 16px 0;
 }
 
 .details > h2 {
+  flex: 1;
   font-weight: 400;
+}
+
+.details > button {
+  align-self: start;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--idle-dark),
+    var(--primary)
+  );
+  color: var(--invert);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.details > button:hover {
+  background-position: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .details div p {
