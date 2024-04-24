@@ -73,10 +73,13 @@
   align-items: center;
 }
 
+.author div p {
+  margin-left: 16px;
+}
+
 .author img {
   height: 32px;
   width: auto;
-  margin-right: 16px;
   transition: all 0.75s ease;
 }
 
@@ -86,11 +89,11 @@
   transform: rotate(360deg) scale(1.2);
 }
 
-.author :last-child {
+.author > :last-child {
   text-align: end;
 }
 
-.author :last-child > a {
+.author > :last-child > a {
   font-weight: 700;
   text-decoration: none;
   color: inherit;
