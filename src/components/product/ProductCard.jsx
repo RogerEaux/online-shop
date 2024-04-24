@@ -1,7 +1,7 @@
 import useFetchProduct from '../../utils/useFetchProduct.jsx';
 import Rating from '../general/Rating.jsx';
-import loadingGIF from '../../assets/images/loading.gif';
 import RequestError from '../general/RequestError';
+import Loading from '../general/Loading.jsx';
 
 function ProductCard() {
   const { product, loading, error } = useFetchProduct();
@@ -9,9 +9,7 @@ function ProductCard() {
   return (
     <main>
       {loading ? (
-        <div>
-          <img src={loadingGIF} alt="loading" />
-        </div>
+        <Loading />
       ) : error ? (
         <RequestError
           errorMessage={"this product doesn't exist"}

@@ -1,7 +1,7 @@
 import useFetchCategory from '../../utils/useFetchCategory';
 import Categories from '../general/Categories';
 import ItemGrid from './ItemGrid';
-import loadingGIF from '../../assets/images/loading.gif';
+import Loading from '../general/Loading';
 import RequestError from '../general/RequestError';
 import styles from '../../styles/shop/Main.module.css';
 
@@ -17,9 +17,7 @@ function Main() {
         </div>
       </aside>
       {loading ? (
-        <div className={styles.loading}>
-          <img src={loadingGIF} alt="loading" />
-        </div>
+        <Loading />
       ) : error ? (
         <RequestError
           errorMessage={"the server didn't respond"}
