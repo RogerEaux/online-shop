@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function useFetchItem() {
-  const [item, setItems] = useState([]);
+function useFetchProduct() {
+  const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { productId } = useParams();
@@ -20,7 +20,7 @@ function useFetchItem() {
         }
         return response.json();
       })
-      .then((response) => setItems(response))
+      .then((response) => setProduct(response))
       .catch((error) => {
         if (error.name !== 'AbortError') {
           setError(error);
@@ -33,7 +33,7 @@ function useFetchItem() {
     };
   }, [url]);
 
-  return { item, loading, error };
+  return { product, loading, error };
 }
 
-export default useFetchItem;
+export default useFetchProduct;
