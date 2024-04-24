@@ -11,15 +11,23 @@ describe('ProductCard component', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders item title', () => {
+  it('renders product title', () => {
     render(<ProductCard />);
 
     expect(screen.getByRole('heading', { name: /title/i })).toBeInTheDocument();
   });
 
-  it('renders item price', () => {
+  it('renders product price', () => {
     render(<ProductCard />);
 
     expect(screen.getByText(`$`)).toBeInTheDocument();
+  });
+
+  it('renders product description', () => {
+    render(<ProductCard />);
+
+    expect(
+      screen.getByRole('heading', { name: /description/i }),
+    ).toBeInTheDocument();
   });
 });
