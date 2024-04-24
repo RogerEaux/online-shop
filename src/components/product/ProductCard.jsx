@@ -8,11 +8,11 @@ function ProductCard() {
     location.reload();
   }
 
-  const { product, loading, error } = useFetchProduct();
+  const { product, error } = useFetchProduct();
 
   return (
     <main>
-      {loading ? (
+      {!product ? (
         <div>
           <img src={loadingGIF} alt="loading" />
         </div>

@@ -2,16 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 function useFetchProduct() {
-  const [product, setProduct] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
   const { productId } = useParams();
   const url = `https://fakestoreapi.com/products/${productId ? productId : 1}`;
 
   useEffect(() => {
     const controller = new AbortController();
-
-    setLoading(true);
 
     fetch(url, { signal: controller.signal })
       .then((response) => {
@@ -25,15 +22,14 @@ function useFetchProduct() {
         if (error.name !== 'AbortError') {
           setError(error);
         }
-      })
-      .finally(() => setLoading(false));
+      });
 
     return () => {
       controller.abort();
     };
   }, [url]);
 
-  return { product, loading, error };
+  return { product, error };
 }
 
 export default useFetchProduct;
