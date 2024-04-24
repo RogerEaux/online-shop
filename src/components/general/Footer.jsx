@@ -27,9 +27,17 @@ function Footer() {
       <div className={styles.author}>
         <div>
           <Link to="https://github.com/RogerEaux/shopping-cart">
-            <img src={github} alt="github" />
+            <img src={github} alt="github repo" />
           </Link>
-          <p>© 2024 RogerEaux</p>
+          <p>
+            <span>© 2024 </span>
+            <Link
+              aria-label="RogerEaux GitHub"
+              to={'https://github.com/RogerEaux'}
+            >
+              RogerEaux
+            </Link>
+          </p>
         </div>
         <p>
           <span>Project made using </span>
