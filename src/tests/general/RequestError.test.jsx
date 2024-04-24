@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import RequestError from '../../components/shop/RequestError';
+import RequestError from '../../components/general/RequestError';
 import { describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
 
@@ -10,20 +10,20 @@ describe('RequestError component', () => {
     render(<RequestError error={error} retry={() => {}} />);
 
     expect(screen.getByRole('heading', { name: /error/i }).textContent).toMatch(
-      `Oops! Looks like you've encountered a ${error.message}`,
+      `Oops! Looks like ${error.message}`,
     );
   });
 
-  it('calls retry function when clicking retry button', async () => {
-    const retry = vi.fn();
+  it('calls action function when clicking action button', async () => {
+    const action = vi.fn();
     const user = userEvent.setup();
 
-    render(<RequestError error={{}} retry={retry} />);
+    render(<RequestError error={{}} action={action} actionButton={'Retry'} />);
 
-    expect(screen.getByRole('button', { name: /retry/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /action/i })).toBeInTheDocument();
 
-    await user.click(screen.getByRole('button', { name: /retry/i }));
+    await user.click(screen.getByRole('button', { name: /action/i }));
 
-    expect(retry).toHaveBeenCalled();
+    expect(action).toHaveBeenCalled();
   });
 });
