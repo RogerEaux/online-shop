@@ -60,7 +60,8 @@
   transition: all 0.5s ease-in-out;
 }
 
-.details > button:hover {
+.details > button:hover,
+.details > button:focus {
   background-position: 0;
   transition: all 0.5s ease-in-out;
 }
