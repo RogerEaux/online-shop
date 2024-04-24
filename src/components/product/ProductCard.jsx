@@ -7,6 +7,7 @@ function ProductCard() {
     <main>
       <img src={item.image} alt="product image" />
       <h1 aria-label="title">{item.title}</h1>
+      <p>${item.price}</p>
     </main>
   );
 }
