@@ -4,10 +4,6 @@ import loadingGIF from '../../assets/images/loading.gif';
 import RequestError from '../general/RequestError';
 
 function ProductCard() {
-  function retry() {
-    location.reload();
-  }
-
   const { product, loading, error } = useFetchProduct();
 
   return (
@@ -17,7 +13,11 @@ function ProductCard() {
           <img src={loadingGIF} alt="loading" />
         </div>
       ) : error ? (
-        <RequestError error={error} retry={retry} />
+        <RequestError
+          errorMessage={"this product doesn't exist"}
+          path={'/shop'}
+          actionButton={'Go back'}
+        />
       ) : product ? (
         <>
           <img src={product.image} alt="product image" />

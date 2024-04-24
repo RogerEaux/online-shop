@@ -6,10 +6,6 @@ import RequestError from '../general/RequestError';
 import styles from '../../styles/shop/Main.module.css';
 
 function Main() {
-  function retry() {
-    location.reload();
-  }
-
   const { items, loading, error } = useFetchCategory();
 
   return (
@@ -25,7 +21,11 @@ function Main() {
           <img src={loadingGIF} alt="loading" />
         </div>
       ) : error ? (
-        <RequestError error={error} retry={retry} />
+        <RequestError
+          errorMessage={"the server didn't respond"}
+          path={'./'}
+          actionButton={'Retry'}
+        />
       ) : (
         <ItemGrid items={items} />
       )}
