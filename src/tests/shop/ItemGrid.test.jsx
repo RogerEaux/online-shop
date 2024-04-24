@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import ItemGrid from '../../components/shop/ItemGrid';
 import { describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
 
 vi.mock('../../components/shop/ItemCard', () => ({
   default: ({ item }) => (
@@ -20,7 +21,11 @@ const items = [
 
 describe('ItemGrid component', () => {
   it('renders number of items displayed', () => {
-    render(<ItemGrid items={items} />);
+    render(
+      <BrowserRouter>
+        <ItemGrid items={items} />
+      </BrowserRouter>,
+    );
 
     expect(screen.getByText(`${items.length} items`)).toBeInTheDocument();
   });
@@ -28,7 +33,11 @@ describe('ItemGrid component', () => {
   it('renders items sorted by rating', async () => {
     const user = userEvent.setup();
 
-    render(<ItemGrid items={items} />);
+    render(
+      <BrowserRouter>
+        <ItemGrid items={items} />
+      </BrowserRouter>,
+    );
 
     await user.selectOptions(screen.getByRole('combobox'), 'Popular');
 
@@ -40,7 +49,11 @@ describe('ItemGrid component', () => {
   it('renders items sorted by low to high price', async () => {
     const user = userEvent.setup();
 
-    render(<ItemGrid items={items} />);
+    render(
+      <BrowserRouter>
+        <ItemGrid items={items} />
+      </BrowserRouter>,
+    );
 
     await user.selectOptions(screen.getByRole('combobox'), 'Price Low to High');
 
@@ -52,7 +65,11 @@ describe('ItemGrid component', () => {
   it('renders items sorted by high to low price', async () => {
     const user = userEvent.setup();
 
-    render(<ItemGrid items={items} />);
+    render(
+      <BrowserRouter>
+        <ItemGrid items={items} />
+      </BrowserRouter>,
+    );
 
     await user.selectOptions(screen.getByRole('combobox'), 'Price High to Low');
 
@@ -64,7 +81,11 @@ describe('ItemGrid component', () => {
   it('renders items sorted alphabetically A to Z', async () => {
     const user = userEvent.setup();
 
-    render(<ItemGrid items={items} />);
+    render(
+      <BrowserRouter>
+        <ItemGrid items={items} />
+      </BrowserRouter>,
+    );
 
     await user.selectOptions(screen.getByRole('combobox'), 'A to Z');
 
@@ -76,7 +97,11 @@ describe('ItemGrid component', () => {
   it('renders items sorted alphabetically Z to A', async () => {
     const user = userEvent.setup();
 
-    render(<ItemGrid items={items} />);
+    render(
+      <BrowserRouter>
+        <ItemGrid items={items} />
+      </BrowserRouter>,
+    );
 
     await user.selectOptions(screen.getByRole('combobox'), 'Z to A');
 
