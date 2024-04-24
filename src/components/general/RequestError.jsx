@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import styles from '../../styles/general/RequestError.module.css';
+import { Link } from 'react-router-dom';
 
-function RequestError({ error, action, actionButton }) {
+function RequestError({ errorMessage, path, actionButton }) {
   return (
     <div className={styles.error}>
-      <h2 aria-label="error">Oops! Looks like {error.message}</h2>
-      <button aria-label="action" onClick={action}>
+      <h2 aria-label="error">Oops! Looks like {errorMessage}</h2>
+      <Link to={path} aria-label="action">
         {actionButton}
-      </button>
+      </Link>
     </div>
   );
 }
@@ -15,9 +16,8 @@ function RequestError({ error, action, actionButton }) {
 export default RequestError;
 
 RequestError.propTypes = {
-  error: PropTypes.shape({
-    message: PropTypes.string,
-  }),
+  errorMessage: PropTypes.string,
+  path: PropTypes.string,
   action: PropTypes.func,
   actionButton: PropTypes.string,
 };

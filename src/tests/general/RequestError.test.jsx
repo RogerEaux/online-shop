@@ -2,15 +2,20 @@ import { render, screen } from '@testing-library/react';
 import RequestError from '../../components/general/RequestError';
 import { describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('RequestError component', () => {
   it('renders error message', () => {
-    const error = { message: 'Foo Error' };
+    const error = 'Foo Error';
 
-    render(<RequestError error={error} />);
+    render(
+      <BrowserRouter>
+        <RequestError errorMessage={error} />
+      </BrowserRouter>,
+    );
 
     expect(screen.getByRole('heading', { name: /error/i }).textContent).toMatch(
-      `Oops! Looks like ${error.message}`,
+      `Oops! Looks like ${error}`,
     );
   });
 
@@ -18,11 +23,17 @@ describe('RequestError component', () => {
     const action = vi.fn();
     const user = userEvent.setup();
 
-    render(<RequestError error={{}} action={action} />);
+    render(
+      <BrowserRouter>
+        <RequestError action={action} actionButton={'bar'} />
+      </BrowserRouter>,
+    );
 
-    expect(screen.getByRole('button', { name: /action/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /action/i }).textContent).toMatch(
+      'bar',
+    );
 
-    await user.click(screen.getByRole('button', { name: /action/i }));
+    await user.click(screen.getByRole('link', { name: /action/i }));
 
     expect(action).toHaveBeenCalled();
   });
