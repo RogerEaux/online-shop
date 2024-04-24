@@ -41,4 +41,12 @@ describe('ProductCard component', () => {
       'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
     );
   });
+
+  it('renders add to cart button', async () => {
+    render(<ProductCard />);
+
+    expect(
+      await screen.findByRole('button', { name: /add to cart/i }),
+    ).toBeInTheDocument();
+  });
 });
