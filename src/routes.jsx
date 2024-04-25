@@ -10,10 +10,7 @@ const routes = [
   {
     path: '/shop',
     element: <Shop />,
-  },
-  {
-    path: '/shop/:category',
-    element: <Shop />,
+    children: [{ path: ':category', element: <Shop /> }],
   },
   {
     path: '/product/:productId',
