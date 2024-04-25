@@ -12,8 +12,8 @@ function ItemGrid({ items }) {
   const searchedItems = items.filter((item) => {
     if (!searchOption) return true;
     return (
-      item.title.includes(searchOption) ||
-      item.description.includes(searchOption)
+      item.title.toLowerCase().includes(searchOption.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchOption.toLowerCase())
     );
   });
   const sortedItems = sortItems(searchedItems, sortOption);
