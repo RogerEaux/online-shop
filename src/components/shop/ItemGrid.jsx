@@ -19,7 +19,11 @@ function ItemGrid({ items }) {
   const sortedItems = sortItems(searchedItems, sortOption);
 
   function updateOption(e) {
-    setSearchParams({ ...searchParams, sort: e.target.value });
+    setSearchParams((searchParams) => {
+      searchParams.set('sort', e.target.value);
+
+      return searchParams;
+    });
   }
 
   return (
