@@ -26,11 +26,15 @@ function ItemGrid({ items }) {
     <article className={styles.itemGrid}>
       <p>{sortedItems.length} items</p>
       <Sorter updateOption={updateOption} />
-      <section className={styles.items}>
-        {sortedItems.map((item) => {
-          return <ItemCard key={item.id} item={item} />;
-        })}
-      </section>
+      {sortedItems.length !== 0 ? (
+        <section className={styles.items}>
+          {sortedItems.map((item) => {
+            return <ItemCard key={item.id} item={item} />;
+          })}
+        </section>
+      ) : (
+        <h2 className={styles.noItems}>We are all out of those...</h2>
+      )}
     </article>
   );
 }
