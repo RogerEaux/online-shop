@@ -8,7 +8,15 @@ import sortItems from '../../utils/sortItems';
 function ItemGrid({ items }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const sortOption = searchParams.get('sort');
-  const sortedItems = sortItems(items, sortOption);
+  const searchOption = searchParams.get('search');
+  const searchedItems = items.filter((item) => {
+    if (!searchOption) return true;
+    return (
+      item.title.includes(searchOption) ||
+      item.description.includes(searchOption)
+    );
+  });
+  const sortedItems = sortItems(searchedItems, sortOption);
 
   function updateOption(e) {
     setSearchParams({ ...searchParams, sort: e.target.value });
