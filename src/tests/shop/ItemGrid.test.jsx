@@ -109,4 +109,17 @@ describe('ItemGrid component', () => {
     expect(screen.getAllByRole('link')[1].textContent).toMatch('baz');
     expect(screen.getAllByRole('link')[2].textContent).toMatch('bar');
   });
+
+  it('renders message when there are no items', () => {
+    render(
+      <BrowserRouter>
+        <ItemGrid items={[]} />
+      </BrowserRouter>,
+    );
+
+    expect(
+      screen.getByRole('heading', { name: /we are all out of those.../i })
+        .textContent,
+    ).toMatch('We are all out of those...');
+  });
 });
