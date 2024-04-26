@@ -1,14 +1,18 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import searchIcon from '../../assets/svg/search.svg';
 import styles from '../../styles/general/SearchBar.module.css';
 
 function SearchBar() {
+  const [searchValue, setSearchValue] = useState('');
   const navigate = useNavigate();
-  const inputRef = useRef(null);
+
+  function handleSearchValue(e) {
+    setSearchValue(e.target.value);
+  }
 
   function search() {
-    navigate(`/shop?search=${inputRef.current.value}`);
+    navigate(`/shop?search=${searchValue}`);
   }
 
   function searchEnter(e) {
@@ -21,11 +25,12 @@ function SearchBar() {
     <>
       <label className={styles.search} aria-label="search">
         <input
+          onChange={handleSearchValue}
           onKeyDown={searchEnter}
-          ref={inputRef}
           className={styles.searchBox}
           type="text"
           id="searchBox"
+          value={searchValue}
           placeholder="Search for item..."
         />
         <button onClick={search} className={styles.searchButton}>
