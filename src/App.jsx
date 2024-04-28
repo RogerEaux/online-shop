@@ -1,5 +1,6 @@
-import { createContext, useState } from 'react';
+import { createContext, useReducer, useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import cartItemsReducer from './utils/cartItemsReducer';
 
 const CartContext = createContext({
   isCartActive: null,
@@ -11,39 +12,28 @@ const CartContext = createContext({
 });
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, dispatch] = useReducer(cartItemsReducer, []);
   const [isCartActive, setIsCartActive] = useState(false);
 
   function deleteItem(e) {
-    const targetId = parseInt(e.currentTarget.parentElement.dataset.id);
-    const newCartItems = cartItems.filter((item) => item.id !== targetId);
-
-    setCartItems(newCartItems);
+    dispatch({
+      type: 'delete_item',
+      targetId: parseInt(e.currentTarget.parentElement.dataset.id),
+    });
   }
 
   function plusItem(e) {
-    const targetId = parseInt(
-      e.currentTarget.parentElement.parentElement.dataset.id,
-    );
-    const targetItem = cartItems.find((item) => item.id === targetId);
-    const newCartItems = cartItems.filter((item) => item.id !== targetId);
-    const newItem = { ...targetItem, quantity: targetItem.quantity + 1 };
-
-    setCartItems([...newCartItems, newItem]);
+    dispatch({
+      type: 'plus_item',
+      targetId: parseInt(e.target.parentElement.parentElement.dataset.id),
+    });
   }
 
   function minusItem(e) {
-    const targetId = parseInt(
-      e.currentTarget.parentElement.parentElement.dataset.id,
-    );
-    const targetItem = cartItems.find((item) => item.id === targetId);
-    const newCartItems = cartItems.filter((item) => item.id !== targetId);
-    if (targetItem.quantity === 1) {
-      setCartItems(newCartItems);
-    } else {
-      const newItem = { ...targetItem, quantity: targetItem.quantity - 1 };
-      setCartItems([...newCartItems, newItem]);
-    }
+    dispatch({
+      type: 'minus_item',
+      targetId: parseInt(e.target.parentElement.parentElement.dataset.id),
+    });
   }
 
   function toggleCart() {
