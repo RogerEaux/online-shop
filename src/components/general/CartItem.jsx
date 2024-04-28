@@ -17,7 +17,7 @@ function CartItem({ item, deleteItem, plusItem, minusItem }) {
         <button aria-label="plus" onClick={plusItem}>
           +
         </button>
-
+        <p aria-label="quantity">{item.quantity}</p>
         <button aria-label="minus" onClick={minusItem}>
           -
         </button>
@@ -32,6 +32,7 @@ CartItem.propTypes = {
     title: PropTypes.string,
     price: PropTypes.number,
     image: PropTypes.string,
+    quantity: PropTypes.number,
   }),
   deleteItem: PropTypes.func,
   plusItem: PropTypes.func,
