@@ -1,5 +1,5 @@
 import ProtpTypes from 'prop-types';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { CartContext } from '../../App';
 import CartItem from './CartItem';
 import styles from '../../styles/general/Cart.module.css';
@@ -13,9 +13,20 @@ function Cart() {
     plusItem,
     minusItem,
   } = useContext(CartContext);
+  const modal = useRef(null);
+
+  function handleCloseModal(e) {
+    if (e.target === modal.current) {
+      toggleCart();
+    }
+  }
 
   return (
-    <div className={`${styles.modal} ${isCartActive ? styles.show : ''}`}>
+    <div
+      onClick={handleCloseModal}
+      ref={modal}
+      className={`${styles.modal} ${isCartActive ? styles.show : ''}`}
+    >
       <aside className={styles.cart}>
         <h1>Shopping Cart</h1>
         <button onClick={toggleCart} aria-label="Close">
