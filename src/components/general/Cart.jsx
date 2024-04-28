@@ -40,6 +40,7 @@ function Cart() {
                   <CartItem
                     key={item.id}
                     item={item}
+                    toggleCart={toggleCart}
                     deleteItem={deleteItem}
                     plusItem={plusItem}
                     minusItem={minusItem}
