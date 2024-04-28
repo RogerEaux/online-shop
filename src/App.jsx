@@ -20,6 +20,7 @@ function App() {
       type: 'add_item',
       item: item,
     });
+    setIsCartActive(true);
   }
 
   function deleteItem(e) {
