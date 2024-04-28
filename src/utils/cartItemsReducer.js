@@ -1,5 +1,9 @@
 function cartItemsReducer(cartItems, action) {
   switch (action.type) {
+    case 'add_item': {
+      return [...cartItems, action.item];
+    }
+
     case 'delete_item': {
       return cartItems.filter((item) => item.id !== action.targetId);
     }

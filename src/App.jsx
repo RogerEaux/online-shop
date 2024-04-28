@@ -15,6 +15,13 @@ function App() {
   const [cartItems, dispatch] = useReducer(cartItemsReducer, []);
   const [isCartActive, setIsCartActive] = useState(false);
 
+  function addItem(item) {
+    dispatch({
+      type: 'add_item',
+      item: item,
+    });
+  }
+
   function deleteItem(e) {
     dispatch({
       type: 'delete_item',
@@ -50,6 +57,7 @@ function App() {
         isCartActive,
         toggleCart,
         cartItems,
+        addItem,
         deleteItem,
         plusItem,
         minusItem,
