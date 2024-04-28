@@ -4,7 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
-const item = { title: 'foo', price: 42 };
+const item = { title: 'foo', price: 42, quantity: 2 };
 
 describe('CartItem component', () => {
   it('renders item image', () => {
@@ -31,7 +31,7 @@ describe('CartItem component', () => {
     ).toMatch(item.title);
   });
 
-  it('render item price', () => {
+  it('renders item price', () => {
     render(
       <BrowserRouter>
         <CartItem item={item} />
@@ -39,6 +39,16 @@ describe('CartItem component', () => {
     );
 
     expect(screen.getByText(`$${item.price.toString()}`)).toBeInTheDocument();
+  });
+
+  it('renders item quantity', () => {
+    render(
+      <BrowserRouter>
+        <CartItem item={item} />
+      </BrowserRouter>,
+    );
+
+    expect(screen.getByText(`${item.quantity}`)).toBeInTheDocument();
   });
 
   it('renders delete item button that calls a function when clicked', async () => {
