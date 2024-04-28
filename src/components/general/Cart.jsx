@@ -4,7 +4,8 @@ import { CartContext } from '../../App';
 import CartItem from './CartItem';
 
 function Cart({ closeCart }) {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, deleteItem, plusItem, minusItem } =
+    useContext(CartContext);
 
   return (
     <aside>
@@ -16,7 +17,15 @@ function Cart({ closeCart }) {
         <>
           <section>
             {cartItems.map((item) => {
-              return <CartItem key={item.id} item={item} />;
+              return (
+                <CartItem
+                  key={item.id}
+                  item={item}
+                  deleteItem={deleteItem}
+                  plusItem={plusItem}
+                  minusItem={minusItem}
+                />
+              );
             })}
           </section>
           <p>

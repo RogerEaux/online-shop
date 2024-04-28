@@ -4,7 +4,7 @@ import deleteImage from '../../assets/svg/delete.svg';
 
 function CartItem({ item, deleteItem, plusItem, minusItem }) {
   return (
-    <div>
+    <div data-id={item.id}>
       <button onClick={deleteItem}>
         <img src={deleteImage} alt="delete" />
       </button>
