@@ -2,6 +2,8 @@ import { createContext, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 const CartContext = createContext({
+  isCartActive: null,
+  setIsCartActive: () => {},
   cartItems: [],
   deleteItem: () => {},
   plusItem: () => {},
@@ -10,6 +12,7 @@ const CartContext = createContext({
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [isCartActive, setIsCartActive] = useState(false);
 
   function deleteItem(e) {
     const targetId = parseInt(e.currentTarget.parentElement.dataset.id);
@@ -43,9 +46,24 @@ function App() {
     }
   }
 
+  function toggleCart() {
+    if (isCartActive) {
+      setIsCartActive(false);
+    } else {
+      setIsCartActive(true);
+    }
+  }
+
   return (
     <CartContext.Provider
-      value={{ cartItems, deleteItem, plusItem, minusItem }}
+      value={{
+        isCartActive,
+        toggleCart,
+        cartItems,
+        deleteItem,
+        plusItem,
+        minusItem,
+      }}
     >
       <Outlet />
     </CartContext.Provider>

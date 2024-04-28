@@ -5,14 +5,22 @@ import CartItem from './CartItem';
 import styles from '../../styles/general/Cart.module.css';
 
 function Cart() {
-  const { cartItems, deleteItem, plusItem, minusItem } =
-    useContext(CartContext);
+  const {
+    isCartActive,
+    toggleCart,
+    cartItems,
+    deleteItem,
+    plusItem,
+    minusItem,
+  } = useContext(CartContext);
 
   return (
-    <div className={styles.modal}>
+    <div className={`${styles.modal} ${isCartActive ? styles.show : ''}`}>
       <aside className={styles.cart}>
         <h1>Shopping Cart</h1>
-        <button aria-label="Close">X</button>
+        <button onClick={toggleCart} aria-label="Close">
+          X
+        </button>
         {cartItems.length ? (
           <div className={styles.items}>
             <section>
