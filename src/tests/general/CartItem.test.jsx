@@ -41,7 +41,7 @@ describe('CartItem component', () => {
     expect(screen.getByText(`$${item.price.toString()}`)).toBeInTheDocument();
   });
 
-  it('renders delete item button that calls function when clicked', async () => {
+  it('renders delete item button that calls a function when clicked', async () => {
     const deleteItem = vi.fn();
     const user = userEvent.setup();
 
@@ -56,5 +56,26 @@ describe('CartItem component', () => {
     await user.click(screen.getByRole('button', { name: /delete/i }));
 
     expect(deleteItem).toHaveBeenCalled();
+  });
+
+  it('renders plus and minus item buttons that call a function when clicked', async () => {
+    const plusItem = vi.fn();
+    const minusItem = vi.fn();
+    const user = userEvent.setup();
+
+    render(
+      <BrowserRouter>
+        <CartItem item={item} plusItem={plusItem} minusItem={minusItem} />
+      </BrowserRouter>,
+    );
+
+    expect(screen.getByRole('button', { name: /plus/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /minus/i })).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: /plus/i }));
+    await user.click(screen.getByRole('button', { name: /minus/i }));
+
+    expect(plusItem).toHaveBeenCalled();
+    expect(minusItem).toHaveBeenCalled();
   });
 });
