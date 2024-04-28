@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import Cart from '../../components/general/Cart';
 import { describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
+import { createContext } from 'react';
 
 describe('Cart component', () => {
   it('renders shopping cart title', () => {
@@ -21,5 +22,19 @@ describe('Cart component', () => {
     await user.click(screen.getByRole('button', { name: /close/i }));
 
     expect(closeCart).toHaveBeenCalled();
+  });
+
+  it('renders no item message when there are no items in the cart', () => {
+    const CartContext = createContext({});
+
+    render(
+      <CartContext.Provider value={[]}>
+        <Cart closeCart={() => {}} />
+      </CartContext.Provider>,
+    );
+
+    expect(
+      screen.getByText('Go add some items to your cart!'),
+    ).toBeInTheDocument();
   });
 });
