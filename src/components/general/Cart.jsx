@@ -4,7 +4,7 @@ import { CartContext } from '../../App';
 import CartItem from './CartItem';
 
 function Cart({ closeCart }) {
-  const cartItems = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
 
   return (
     <aside>

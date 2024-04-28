@@ -31,8 +31,10 @@ describe('Cart component', () => {
   });
 
   it('renders no item message when there are no items in the cart', () => {
+    const cartItems = [];
+
     render(
-      <CartContext.Provider value={[]}>
+      <CartContext.Provider value={{ cartItems }}>
         <Cart />
       </CartContext.Provider>,
     );
@@ -43,13 +45,13 @@ describe('Cart component', () => {
   });
 
   it('renders items, subtotal and checkout button when there are items in cart', () => {
+    const cartItems = [
+      { id: 1, title: 'foo', price: 42, image: 'foo.jpg' },
+      { id: 2, title: 'bar', price: 69, image: 'bar.jpg' },
+    ];
+
     render(
-      <CartContext.Provider
-        value={[
-          { id: 1, title: 'foo', price: 42, image: 'foo.jpg' },
-          { id: 2, title: 'bar', price: 69, image: 'bar.jpg' },
-        ]}
-      >
+      <CartContext.Provider value={{ cartItems }}>
         <Cart />
       </CartContext.Provider>,
     );
