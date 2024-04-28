@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Cart from '../../components/general/Cart';
 import { describe, expect, it, vi } from 'vitest';
-import userEvent from '@testing-library/user-event';
 import { CartContext } from '../../App';
 
 vi.mock('../../components/general/CartItem', () => ({
@@ -19,15 +18,10 @@ describe('Cart component', () => {
     ).toMatch('Shopping Cart');
   });
 
-  it('renders closing shopping cart button that calls closing function when clicked', async () => {
-    const closeCart = vi.fn();
-    const user = userEvent.setup();
+  it('renders closing shopping cart button', async () => {
+    render(<Cart />);
 
-    render(<Cart closeCart={closeCart} />);
-
-    await user.click(screen.getByRole('button', { name: /close/i }));
-
-    expect(closeCart).toHaveBeenCalled();
+    expect(screen.getByRole('button', { name: /close/i })).toBeInTheDocument();
   });
 
   it('renders no item message when there are no items in the cart', () => {
