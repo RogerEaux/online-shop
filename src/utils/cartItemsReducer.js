@@ -1,14 +1,19 @@
 function cartItemsReducer(cartItems, action) {
   switch (action.type) {
     case 'add_item': {
-      const targetItem = cartItems.find((item) => item.id === action.item.id);
-      if (targetItem) {
-        const newCartItems = cartItems.filter(
-          (item) => item.id !== action.item.id,
-        );
-        const newItem = { ...targetItem, quantity: targetItem.quantity + 1 };
+      const targetItemIndex = cartItems.findIndex(
+        (item) => item.id === action.item.id,
+      );
+      if (targetItemIndex !== -1) {
+        const newCartItems = cartItems.map((item, index) => {
+          if (index === targetItemIndex) {
+            return { ...item, quantity: item.quantity + 1 };
+          }
 
-        return [...newCartItems, newItem];
+          return item;
+        });
+
+        return newCartItems;
       }
 
       return [...cartItems, action.item];
@@ -19,27 +24,38 @@ function cartItemsReducer(cartItems, action) {
     }
 
     case 'plus_item': {
-      const targetItem = cartItems.find((item) => item.id === action.targetId);
-      const newCartItems = cartItems.filter(
-        (item) => item.id !== action.targetId,
+      const targetItemIndex = cartItems.findIndex(
+        (item) => item.id === action.targetId,
       );
-      const newItem = { ...targetItem, quantity: targetItem.quantity + 1 };
+      const newCartItems = cartItems.map((item, index) => {
+        if (index === targetItemIndex) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
 
-      return [...newCartItems, newItem];
+        return item;
+      });
+
+      return newCartItems;
     }
 
     case 'minus_item': {
-      const targetItem = cartItems.find((item) => item.id === action.targetId);
-      const newCartItems = cartItems.filter(
-        (item) => item.id !== action.targetId,
+      const targetItemIndex = cartItems.findIndex(
+        (item) => item.id === action.targetId,
       );
 
-      if (targetItem.quantity !== 1) {
-        const newItem = { ...targetItem, quantity: targetItem.quantity - 1 };
-        return [...newCartItems, newItem];
+      if (cartItems[targetItemIndex].quantity !== 1) {
+        const newCartItems = cartItems.map((item, index) => {
+          if (index === targetItemIndex) {
+            return { ...item, quantity: item.quantity - 1 };
+          }
+
+          return item;
+        });
+
+        return newCartItems;
       }
 
-      return newCartItems;
+      return cartItems.filter((item) => item.id !== action.targetId);
     }
 
     default: {
