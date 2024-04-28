@@ -29,4 +29,14 @@ describe('CartItem component', () => {
       screen.getByRole('heading', { name: item.title }).textContent,
     ).toMatch(item.title);
   });
+
+  it('render item price', () => {
+    render(
+      <BrowserRouter>
+        <CartItem item={item} />
+      </BrowserRouter>,
+    );
+
+    expect(screen.getByText(`$${item.price.toString()}`)).toBeInTheDocument();
+  });
 });
