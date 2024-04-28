@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import deleteImage from '../../assets/svg/delete.svg';
 
-function CartItem({ item, deleteItem }) {
+function CartItem({ item, deleteItem, plusItem, minusItem }) {
   return (
     <div>
       <button onClick={deleteItem}>
@@ -13,6 +13,15 @@ function CartItem({ item, deleteItem }) {
       </Link>
       <h2>{item.title}</h2>
       <p>${item.price}</p>
+      <div>
+        <button aria-label="plus" onClick={plusItem}>
+          +
+        </button>
+
+        <button aria-label="minus" onClick={minusItem}>
+          -
+        </button>
+      </div>
     </div>
   );
 }
@@ -25,6 +34,8 @@ CartItem.propTypes = {
     image: PropTypes.string,
   }),
   deleteItem: PropTypes.func,
+  plusItem: PropTypes.func,
+  minusItem: PropTypes.func,
 };
 
 export default CartItem;
