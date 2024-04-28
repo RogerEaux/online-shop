@@ -1,0 +1,49 @@
+.modal {
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 11;
+  backdrop-filter: blur(5px) brightness(0.5);
+}
+
+.cart {
+  position: absolute;
+  right: 0;
+  display: grid;
+  grid-template:
+    'title close' min-content
+    'items items' 1fr / 1fr min-content;
+  height: 100vh;
+  width: 30vw;
+  padding: 32px;
+  background-color: var(--invert);
+}
+
+.cart button {
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  color: var(--idle-dark);
+  cursor: pointer;
+}
+
+.cart h1 {
+  font-size: 2rem;
+}
+
+.cart button:hover {
+  transition: all 0.33s ease;
+  color: var(--secondary);
+}
+
+.noItems,
+.items {
+  grid-area: items;
+}
+
+.noItems {
+  font-size: 1.5rem;
+  align-self: center;
+  text-align: center;
+}
