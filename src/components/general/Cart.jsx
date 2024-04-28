@@ -50,10 +50,9 @@ function Cart() {
             </section>
             <p>
               Subtotal: $
-              {cartItems.reduce(
-                (acc, curr) => acc + curr.price * curr.quantity,
-                0,
-              )}
+              {cartItems
+                .reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
+                .toFixed(2)}
             </p>
             <button>Checkout</button>
           </>
