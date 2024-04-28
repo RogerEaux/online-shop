@@ -1,0 +1,55 @@
+.item {
+  width: 100%;
+  display: grid;
+  grid-template:
+    'delete image title title'
+    'delete image price quantity' / min-content min-content 1fr min-content;
+  align-items: center;
+}
+
+.item > button {
+  grid-area: delete;
+}
+
+.item button img {
+  height: 24px;
+  width: auto;
+}
+
+.item a {
+  grid-area: image;
+}
+
+.item a img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  margin: 0 16px;
+}
+
+.item h2 {
+  grid-area: title;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.item p {
+  grid-area: price;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.quantity {
+  grid-area: quantity;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item .quantity button {
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

@@ -22,8 +22,8 @@
     'title close' min-content
     'items items' 1fr / 1fr min-content;
   height: 100vh;
-  width: 30vw;
-  padding: 32px;
+  width: 512px;
+  padding: 32px 48px;
   background-color: var(--invert);
   transform: translateX(100%);
   transition: all 0.5s ease-in;
@@ -35,6 +35,7 @@
 }
 
 .cart button {
+  justify-self: end;
   font-size: 2rem;
   font-weight: 700;
   border: none;
@@ -42,18 +43,61 @@
   cursor: pointer;
 }
 
-.cart h1 {
-  font-size: 2rem;
-}
-
-.cart button:hover {
+.cart button:hover,
+.cart button:focus {
   transition: color 0.33s ease;
   color: var(--secondary);
+}
+
+.cart h1 {
+  font-size: 2rem;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+.cart > p {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+.cart > button:nth-of-type(2) {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--idle-dark),
+    var(--primary)
+  );
+  color: var(--invert);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.cart > button:nth-of-type(2):hover,
+.cart > button:nth-of-type(2):focus {
+  background-position: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .noItems,
 .items {
   grid-area: items;
+}
+
+.items {
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 32px 0;
+  overflow-y: auto;
 }
 
 .noItems {

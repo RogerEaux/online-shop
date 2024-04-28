@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import deleteImage from '../../assets/svg/delete.svg';
+import styles from '../../styles/general/CartItem.module.css';
 
 function CartItem({ item, toggleCart, deleteItem, plusItem, minusItem }) {
   return (
-    <div data-id={item.id}>
+    <div data-id={item.id} className={styles.item}>
       <button onClick={deleteItem}>
         <img src={deleteImage} alt="delete" />
       </button>
@@ -13,13 +14,13 @@ function CartItem({ item, toggleCart, deleteItem, plusItem, minusItem }) {
       </Link>
       <h2>{item.title}</h2>
       <p>${item.price}</p>
-      <div>
-        <button aria-label="plus" onClick={plusItem}>
-          +
+      <div className={styles.quantity}>
+        <button aria-label="minus" onClick={minusItem}>
+          −
         </button>
         <p aria-label="quantity">{item.quantity}</p>
-        <button aria-label="minus" onClick={minusItem}>
-          -
+        <button aria-label="plus" onClick={plusItem}>
+          +
         </button>
       </div>
     </div>
