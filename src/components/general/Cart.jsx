@@ -1,6 +1,7 @@
 import ProtpTypes from 'prop-types';
 import { useContext } from 'react';
 import { CartContext } from '../../App';
+import CartItem from './CartItem';
 
 function Cart({ closeCart }) {
   const cartItems = useContext(CartContext);
@@ -11,7 +12,21 @@ function Cart({ closeCart }) {
       <button onClick={closeCart} aria-label="Close">
         X
       </button>
-      {cartItems.length ? null : <p>Go add some items to your cart!</p>}
+      {cartItems.length ? (
+        <>
+          <section>
+            {cartItems.map((item) => {
+              return <CartItem key={item.id} item={item} />;
+            })}
+          </section>
+          <p>
+            Subtotal: ${cartItems.reduce((acc, curr) => acc + curr.price, 0)}
+          </p>
+          <button>Checkout</button>
+        </>
+      ) : (
+        <p>Go add some items to your cart!</p>
+      )}
     </aside>
   );
 }
