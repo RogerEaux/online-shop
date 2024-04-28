@@ -22,8 +22,8 @@ function Cart() {
           X
         </button>
         {cartItems.length ? (
-          <div className={styles.items}>
-            <section>
+          <>
+            <section className={styles.items}>
               {cartItems.map((item) => {
                 return (
                   <CartItem
@@ -37,10 +37,14 @@ function Cart() {
               })}
             </section>
             <p>
-              Subtotal: ${cartItems.reduce((acc, curr) => acc + curr.price, 0)}
+              Subtotal: $
+              {cartItems.reduce(
+                (acc, curr) => acc + curr.price * curr.quantity,
+                0,
+              )}
             </p>
             <button>Checkout</button>
-          </div>
+          </>
         ) : (
           <p className={styles.noItems}>Go add some items to your cart!</p>
         )}
