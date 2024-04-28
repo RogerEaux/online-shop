@@ -8,6 +8,7 @@ function CartItem({ item }) {
         <img src={item.image} alt="item image" />
       </Link>
       <h2>{item.title}</h2>
+      <p>${item.price}</p>
     </div>
   );
 }
