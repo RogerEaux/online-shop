@@ -61,7 +61,7 @@
 }
 
 .info > h2 span {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .info > h3 {
