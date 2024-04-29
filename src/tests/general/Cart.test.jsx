@@ -40,8 +40,8 @@ describe('Cart component', () => {
 
   it('renders items, subtotal and checkout button when there are items in cart', () => {
     const cartItems = [
-      { id: 1, title: 'foo', price: 42, image: 'foo.jpg' },
-      { id: 2, title: 'bar', price: 69, image: 'bar.jpg' },
+      { id: 1, title: 'foo', price: 42, image: 'foo.jpg', quantity: 2 },
+      { id: 2, title: 'bar', price: 69, image: 'bar.jpg', quantity: 1 },
     ];
 
     render(
@@ -57,7 +57,7 @@ describe('Cart component', () => {
       screen.getAllByRole('heading', { name: /item/i })[1].textContent,
     ).toMatch('bar');
 
-    expect(screen.getByText(`Subtotal: $111`)).toBeInTheDocument();
+    expect(screen.getByText(`Subtotal: $153.00`)).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: /checkout/i }),
     ).toBeInTheDocument();
