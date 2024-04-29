@@ -31,3 +31,19 @@
   width: 20px;
   height: auto;
 }
+
+@media (max-width: 600px) {
+  .searchBox {
+    width: 25vw;
+    font-size: 1rem;
+  }
+
+  .searchBox,
+  .searchButton {
+    padding: 4px;
+  }
+
+  .searchButton > img {
+    width: 16px;
+  }
+}

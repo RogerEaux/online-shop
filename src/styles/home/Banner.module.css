@@ -75,29 +75,33 @@
   transition: all 0.5s ease-in-out;
 }
 
-.shop > a:hover ~ img,
-.shop > a:focus ~ img {
+.shop > a:hover ~ .stars img,
+.shop > a:focus ~ .stars img {
   visibility: visible;
 }
 
-.shop img {
+.stars {
+  display: flex;
+}
+
+.stars img {
   visibility: hidden;
   opacity: 0.5;
   height: 48px;
   width: auto;
 }
 
-.shop > img:nth-of-type(1) {
+.stars > img:nth-of-type(1) {
   animation: show 0.75s infinite ease;
   transition: visibility 0s 0.5s;
 }
 
-.shop > img:nth-of-type(2) {
+.stars > img:nth-of-type(2) {
   animation: show 0.75s infinite ease 0.25s;
   transition: visibility 0s 0.75s;
 }
 
-.shop > img:nth-of-type(3) {
+.stars > img:nth-of-type(3) {
   animation: show 0.75s infinite ease 0.5s;
   transition: visibility 0s 1s;
 }
@@ -144,12 +148,40 @@
     text-align: center;
   }
 
-  .shop img {
+  .stars img {
     visibility: visible;
   }
 
   .future {
     height: 35vh;
     width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    padding: 24px;
+  }
+
+  .slogan {
+    font-size: 2.5rem;
+  }
+
+  .slogan strong {
+    font-size: 3rem;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
+
+  .shop {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .shop > a {
+    font-size: 1.5rem;
+    padding: 16px 24px;
   }
 }

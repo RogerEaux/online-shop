@@ -15,12 +15,11 @@
 
 .about h1 {
   margin-bottom: 32px;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .about p {
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .links {
@@ -35,7 +34,7 @@
 
 .categories h2,
 .links h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: 32px;
 }
 
@@ -68,7 +67,7 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-top: 64px;
   color: var(--idle);
 }
@@ -110,10 +109,68 @@ a {
 
   .links,
   .categories {
-    justify-self: center;
+    justify-self: start;
   }
 
   .author {
     margin-top: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    grid-template:
+      'about'
+      'categories'
+      'links'
+      'author';
+    gap: 32px;
+  }
+
+  .about,
+  .author {
+    margin: 0;
+  }
+
+  .about h1 {
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+
+  .categories h2,
+  .links h2 {
+    font-size: 1.5rem;
+  }
+
+  .links ul,
+  .categories ul {
+    gap: 16px;
+  }
+
+  .links ul a,
+  .categories ul a {
+    font-size: 1.2rem;
+  }
+
+  .author {
+    font-size: 0.9rem;
+    gap: 16px;
+  }
+
+  .author img {
+    height: 24px;
+  }
+
+  .author div p {
+    text-align: center;
+    margin-left: 8px;
+  }
+
+  .author > p {
+    text-align: end;
   }
 }

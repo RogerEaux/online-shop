@@ -12,7 +12,7 @@
 }
 
 .item button img {
-  height: 24px;
+  height: 32px;
   width: auto;
 }
 
@@ -29,14 +29,14 @@
 
 .item h2 {
   grid-area: title;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 16px;
 }
 
 .item p {
   grid-area: price;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -52,4 +52,23 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .item button img {
+    height: 24px;
+    width: auto;
+  }
+
+  .item h2 {
+    font-size: 0.9rem;
+  }
+
+  .item p {
+    font-size: 1rem;
+  }
+
+  .item .quantity button {
+    font-size: 1rem;
+  }
 }

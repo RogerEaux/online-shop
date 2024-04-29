@@ -49,7 +49,7 @@
   .navBar {
     padding: 32px;
     justify-content: space-between;
-    min-height: 105px;
+    min-height: 128px;
   }
 
   .burgerButton {
@@ -73,11 +73,36 @@
   .burgerMenu {
     order: 2;
     display: none;
-    margin: 0;
+    margin-right: 0;
     margin-left: 32px;
   }
 
   .burgerMenu.visible {
     display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .navBar {
+    padding: 24px;
+    min-height: 92px;
+  }
+
+  .burgerButton > img,
+  .cart > img,
+  .logo > img {
+    height: 24px;
+  }
+
+  .burgerMenu {
+    margin-left: 16px;
+  }
+
+  .burgerMenu ul {
+    gap: 16px;
+  }
+
+  .burgerMenu ul a {
+    font-size: 1rem;
   }
 }

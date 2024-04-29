@@ -92,3 +92,24 @@
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  .catAd {
+    flex-direction: column;
+    padding: 24px 0;
+  }
+
+  .cover > img {
+    width: 75vw;
+  }
+
+  .info > h2 {
+    font-size: 1.5rem;
+    padding: 24px;
+  }
+
+  .info > h3 {
+    font-size: 1.2rem;
+    padding: 24px;
+  }
+}

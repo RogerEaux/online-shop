@@ -37,3 +37,19 @@
     margin-top: 32px;
   }
 }
+
+@media (max-width: 600px) {
+  .main {
+    padding: 24px;
+  }
+
+  .main > h1 {
+    font-size: 2rem;
+    padding: 16px;
+  }
+
+  .main strong {
+    font-size: 3.5rem;
+    margin-top: 32px;
+  }
+}

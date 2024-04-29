@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10vw;
   user-select: none;
   overflow: hidden;
   gap: 16px;
