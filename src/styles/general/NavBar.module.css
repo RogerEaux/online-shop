@@ -1,6 +1,5 @@
 .navBar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
@@ -21,14 +20,64 @@
   width: auto;
 }
 
+.burgerMenu {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 64px;
+}
+
+.burgerButton {
+  display: none;
+}
+
+.burgerButton,
 .cart {
   border: none;
   cursor: pointer;
   background-color: transparent;
 }
 
+.burgerButton > img,
 .cart > img {
   display: block;
   height: 32px;
   width: auto;
+}
+
+@media (max-width: 1000px) {
+  .navBar {
+    padding: 32px;
+    justify-content: space-between;
+    min-height: 105px;
+  }
+
+  .burgerButton {
+    display: block;
+    order: 1;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .cart {
+    order: 3;
+  }
+
+  .cart.hidden,
+  .logo.hidden {
+    display: none;
+  }
+
+  .burgerMenu {
+    order: 2;
+    display: none;
+    margin: 0;
+    margin-left: 32px;
+  }
+
+  .burgerMenu.visible {
+    display: flex;
+  }
 }

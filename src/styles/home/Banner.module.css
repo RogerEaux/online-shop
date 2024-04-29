@@ -120,3 +120,36 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 1000px) {
+  .banner {
+    grid-template:
+      'future'
+      'slogan'
+      'quote'
+      'shop';
+    justify-items: center;
+    padding: 32px;
+  }
+
+  .slogan {
+    font-size: 4rem;
+  }
+
+  .slogan strong {
+    font-size: 5rem;
+  }
+
+  .quote {
+    text-align: center;
+  }
+
+  .shop img {
+    visibility: visible;
+  }
+
+  .future {
+    height: 35vh;
+    width: auto;
+  }
+}

@@ -94,3 +94,26 @@ a {
   transition: all 0.75s ease;
   transform: rotate(360deg) scale(1.2);
 }
+
+@media (max-width: 1000px) {
+  .footer {
+    grid-template:
+      'about about '
+      'categories links'
+      'author author';
+    padding: 32px;
+  }
+
+  .about {
+    margin-bottom: 64px;
+  }
+
+  .links,
+  .categories {
+    justify-self: center;
+  }
+
+  .author {
+    margin-top: 64px;
+  }
+}

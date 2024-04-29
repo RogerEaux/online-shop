@@ -69,3 +69,26 @@
   font-weight: 400;
   padding: 32px;
 }
+
+@media (max-width: 1000px) {
+  .catAd {
+    padding: 32px 0;
+  }
+
+  .cover > img {
+    height: 50vh;
+  }
+
+  .info {
+    visibility: inherit;
+    transform: rotateY(0);
+  }
+
+  .info > h2 {
+    font-size: 2rem;
+  }
+
+  .info > h3 {
+    font-size: 1.5rem;
+  }
+}

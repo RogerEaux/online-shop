@@ -3,13 +3,13 @@
   align-items: center;
   justify-content: center;
   width: max-content;
-  transition: all 0.5s ease;
+  transition: border 0.5s ease;
   border: 2px solid var(--idle);
   border-radius: 3px;
 }
 
 .search:focus-within {
-  transition: all 0.5s ease;
+  transition: border 0.5s ease;
   border: 2px solid var(--secondary);
 }
 
