@@ -3,13 +3,13 @@
 }
 
 .sorter label {
-  font-size: 1rem;
+  font-size: var(--tiny-font);
   margin-right: 8px;
 }
 
 .sorter select {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: var(--tiny-font);
   cursor: pointer;
   padding: 4px;
   border: 2px solid var(--idle);

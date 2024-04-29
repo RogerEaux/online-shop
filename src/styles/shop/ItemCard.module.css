@@ -18,11 +18,11 @@
 }
 
 .item h2 {
-  font-size: 1rem;
+  font-size: var(--tiny-font);
   font-weight: 400;
 }
 
 .item > p {
-  font-size: 1.1rem;
+  font-size: var(--small-font);
   font-weight: 700;
 }

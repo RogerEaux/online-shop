@@ -7,13 +7,13 @@
 
 .error > h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--large-font);
   margin-bottom: 32px;
 }
 
 .error > a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
   font-weight: 700;
   padding: 16px 32px;
   border: none;

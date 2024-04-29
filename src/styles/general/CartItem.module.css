@@ -29,14 +29,14 @@
 
 .item h2 {
   grid-area: title;
-  font-size: 1.2rem;
+  font-size: var(--small-font);
   font-weight: 400;
   margin-bottom: 16px;
 }
 
 .item p {
   grid-area: price;
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
   font-weight: 700;
 }
 
@@ -50,7 +50,7 @@
 
 .item .quantity button {
   border: none;
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
   cursor: pointer;
 }
 
@@ -61,14 +61,14 @@
   }
 
   .item h2 {
-    font-size: 0.9rem;
+    font-size: var(--a-grain-of-sand-font);
   }
 
   .item p {
-    font-size: 1rem;
+    font-size: var(--tiny-font);
   }
 
   .item .quantity button {
-    font-size: 1rem;
+    font-size: var(--tiny-font);
   }
 }

@@ -15,7 +15,7 @@
 
 .searchBox {
   padding: 8px;
-  font-size: 1.1rem;
+  font-size: var(--small-font);
   border: none;
   outline: none;
 }
@@ -35,7 +35,7 @@
 @media (max-width: 600px) {
   .searchBox {
     width: 25vw;
-    font-size: 1rem;
+    font-size: var(--tiny-font);
   }
 
   .searchBox,

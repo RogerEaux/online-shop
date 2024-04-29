@@ -36,7 +36,7 @@
 
 .cart button {
   justify-self: end;
-  font-size: 2rem;
+  font-size: var(--large-font);
   font-weight: 700;
   border: none;
   color: var(--idle-dark);
@@ -50,19 +50,19 @@
 }
 
 .cart h1 {
-  font-size: 2rem;
+  font-size: var(--large-font);
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
 .cart > p {
   align-self: center;
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
   font-weight: 700;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
 .cart > button:nth-of-type(2) {
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
   font-weight: 700;
   padding: 16px 32px;
   border: none;
@@ -101,7 +101,7 @@
 }
 
 .noItems {
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
   align-self: center;
   text-align: center;
 }
@@ -113,15 +113,15 @@
   }
 
   .cart h1 {
-    font-size: 1.5rem;
+    font-size: var(--medium-font);
   }
 
   .cart > p {
-    font-size: 1.2rem;
+    font-size: var(--small-font);
   }
 
   .cart > button:nth-of-type(2) {
-    font-size: 1.2rem;
+    font-size: var(--small-font);
     padding: 16px 24px;
   }
 }

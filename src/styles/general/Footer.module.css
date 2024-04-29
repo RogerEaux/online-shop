@@ -15,11 +15,11 @@
 
 .about h1 {
   margin-bottom: 32px;
-  font-size: 2rem;
+  font-size: var(--large-font);
 }
 
 .about p {
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
 }
 
 .links {
@@ -34,7 +34,7 @@
 
 .categories h2,
 .links h2 {
-  font-size: 2rem;
+  font-size: var(--large-font);
   margin-bottom: 32px;
 }
 
@@ -67,7 +67,7 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: var(--small-font);
   margin-top: 64px;
   color: var(--idle);
 }
@@ -134,16 +134,16 @@ a {
 
   .about h1 {
     margin-bottom: 32px;
-    font-size: 1.5rem;
+    font-size: var(--medium-font);
   }
 
   .about p {
-    font-size: 1.2rem;
+    font-size: var(--small-font);
   }
 
   .categories h2,
   .links h2 {
-    font-size: 1.5rem;
+    font-size: var(--medium-font);
   }
 
   .links ul,
@@ -153,11 +153,11 @@ a {
 
   .links ul a,
   .categories ul a {
-    font-size: 1.2rem;
+    font-size: var(--small-font);
   }
 
   .author {
-    font-size: 0.9rem;
+    font-size: var(--a-grain-of-sand-font);
     gap: 16px;
   }
 

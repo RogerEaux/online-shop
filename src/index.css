@@ -17,6 +17,13 @@
   --idle: #a9a9a9;
   --idle-dark: #565656;
 
+  --huge-font: 2.5rem;
+  --large-font: 2rem;
+  --medium-font: 1.5rem;
+  --small-font: 1.2rem;
+  --tiny-font: 1rem;
+  --a-grain-of-sand-font: 0.9rem;
+
   background-color: var(--invert);
 }
 

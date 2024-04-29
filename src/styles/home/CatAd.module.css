@@ -55,7 +55,7 @@
 }
 
 .info > h2 {
-  font-size: 2.5rem;
+  font-size: var(--huge-font);
   padding: 32px;
   border-bottom: 6px solid black;
 }
@@ -65,7 +65,7 @@
 }
 
 .info > h3 {
-  font-size: 2rem;
+  font-size: var(--large-font);
   font-weight: 400;
   padding: 32px;
 }
@@ -85,11 +85,11 @@
   }
 
   .info > h2 {
-    font-size: 2rem;
+    font-size: var(--large-font);
   }
 
   .info > h3 {
-    font-size: 1.5rem;
+    font-size: var(--medium-font);
   }
 }
 
@@ -104,12 +104,12 @@
   }
 
   .info > h2 {
-    font-size: 1.5rem;
+    font-size: var(--medium-font);
     padding: 24px;
   }
 
   .info > h3 {
-    font-size: 1.2rem;
+    font-size: var(--small-font);
     padding: 24px;
   }
 }

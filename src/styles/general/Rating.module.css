@@ -12,7 +12,7 @@
 }
 
 .rating p {
-  font-size: 1rem;
+  font-size: var(--tiny-font);
 }
 
 .rating p span {
