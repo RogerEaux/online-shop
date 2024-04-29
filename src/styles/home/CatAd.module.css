@@ -25,8 +25,10 @@
 }
 
 .cover > img {
+  height: 75vh;
   width: 40vw;
-  padding: 0 32px;
+  object-fit: contain;
+  padding: 32px;
 }
 
 .cover:hover + .info,
@@ -51,7 +53,12 @@
   border-bottom: 6px solid black;
 }
 
+.info > h2 span {
+  color: var(--primary);
+}
+
 .info > h3 {
   font-size: 2rem;
+  font-weight: 400;
   padding: 32px;
 }
