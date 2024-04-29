@@ -6,12 +6,14 @@ import { Link } from 'react-router-dom';
 import styles from '../../styles/general/NavBar.module.css';
 import { useContext } from 'react';
 import { CartContext } from '../../App';
+import useScroll from '../../utils/useScroll';
 
 function NavBar() {
   const { toggleCart } = useContext(CartContext);
+  const { isHidden } = useScroll();
 
   return (
-    <nav className={styles.navBar}>
+    <nav className={`${styles.navBar} ${isHidden ? styles.hidden : ''}`}>
       <Link to="/" className={styles.logo}>
         <img src={logo} alt="The Company" />
       </Link>
