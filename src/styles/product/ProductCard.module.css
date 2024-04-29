@@ -47,6 +47,7 @@
   padding: 16px 32px;
   border: none;
   border-radius: 8px;
+  margin-top: 16px;
   background-size: 300% 100%;
   background-position: 100% 0;
   background-image: linear-gradient(
@@ -72,4 +73,22 @@
 
 .details > div > div > img {
   height: 24px;
+}
+
+@media (max-width: 1000px) {
+  .productCard {
+    flex-direction: column;
+  }
+
+  .image {
+    flex: 1;
+    align-self: center;
+    width: 70vh;
+    height: 50vw;
+    margin-bottom: 32px;
+  }
+
+  .details {
+    margin: 0;
+  }
 }
