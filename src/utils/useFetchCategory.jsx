@@ -31,13 +31,16 @@ function useFetchCategory() {
         }
         return response.json();
       })
-      .then((response) => setItems(response))
+      .then((response) => {
+        setItems(response);
+        setLoading(false);
+      })
       .catch((error) => {
         if (error.name !== 'AbortError') {
           setError(error);
+          setLoading(false);
         }
-      })
-      .finally(() => setLoading(false));
+      });
 
     return () => {
       controller.abort();

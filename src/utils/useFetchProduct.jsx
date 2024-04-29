@@ -20,13 +20,16 @@ function useFetchProduct() {
         }
         return response.json();
       })
-      .then((response) => setProduct(response))
+      .then((response) => {
+        setProduct(response);
+        setLoading(false);
+      })
       .catch((error) => {
         if (error.name !== 'AbortError') {
           setError(error);
+          setLoading(false);
         }
-      })
-      .finally(() => setLoading(false));
+      });
 
     return () => {
       controller.abort();
