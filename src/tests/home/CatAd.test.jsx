@@ -1,10 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import CatAd from '../../components/home/CatAd';
 import { BrowserRouter } from 'react-router-dom';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 describe('CatAd component', () => {
   it('renders a section with a heading, image and description', () => {
+    const mockIntersectionObserver = vi.fn();
+    mockIntersectionObserver.mockReturnValue({
+      observe: () => null,
+      unobserve: () => null,
+    });
+    window.IntersectionObserver = mockIntersectionObserver;
+
     const title = 'Best Gaming PCs';
     const description = 'Unleash your potential';
 
