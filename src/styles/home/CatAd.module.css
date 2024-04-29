@@ -1,11 +1,12 @@
 .catAd {
-  width: calc(100vw - 128px);
   align-self: start;
   display: flex;
   align-items: center;
   color: var(--primary);
   padding: 64px 0;
   padding-bottom: 32px;
+  visibility: hidden;
+  transform: translateY(10vh);
 }
 
 .reverse {
@@ -16,6 +17,12 @@
   .info {
     transform-origin: right;
   }
+}
+
+.visible {
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 1s ease-out;
 }
 
 .cover {

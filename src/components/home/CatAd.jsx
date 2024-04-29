@@ -1,14 +1,21 @@
 import PropTypes from 'prop-types';
 import styles from '../../styles/home/CatAd.module.css';
 import { Link } from 'react-router-dom';
+import useElementIntersect from '../../utils/useElementIntersect';
 
 function CatAd({ id, title, keyWord, description, cover, reverse }) {
   function getImageURL() {
     return new URL(`../../assets/images/${cover}`, import.meta.url).href;
   }
 
+  const { catAdRef, isVisible } = useElementIntersect();
+
   return (
-    <section role="section" className={reverse ? styles.reverse : styles.catAd}>
+    <section
+      ref={catAdRef}
+      role="section"
+      className={`${reverse ? styles.reverse : styles.catAd} ${isVisible ? styles.visible : ''}`}
+    >
       <Link to={`/product/${id}`} className={styles.cover}>
         <img src={getImageURL(cover)} alt={title} />
       </Link>
