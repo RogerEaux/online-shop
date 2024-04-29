@@ -8,14 +8,18 @@ function Main() {
         Do not hesitate. The time for innovation is <strong>NOW</strong>
       </h1>
       <CatAd
-        title="Best Gaming PCs"
-        description="Unleash your potential"
-        cover={'gaming-pc.jpg'}
+        id={12}
+        title="Don't let storage stop the "
+        keyWord="Gaming"
+        description="Unleash your potential with WD's Gaming External HardDrive"
+        cover={'gaming-drive.jpg'}
       />
       <CatAd
-        title="Best Gaming PCs"
-        description="Unleash your potential"
-        cover={'gaming-pc.jpg'}
+        id={5}
+        title="A little touch of "
+        keyWord="Elegance"
+        description="Show off your fancy side with John Hardy's Naga Gold and Silver Bracelet"
+        cover={'naga-bracelet.jpg'}
         reverse={true}
       />
     </main>
