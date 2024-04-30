@@ -13,3 +13,32 @@
 .categories h2 {
   margin-bottom: 32px;
 }
+
+@media (max-width: 1000px) {
+  .main {
+    padding: 32px;
+    grid-template:
+      'side'
+      'main';
+  }
+
+  .main aside {
+    padding: 32px 0;
+    margin-bottom: 32px;
+  }
+
+  .main aside ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 175px);
+    justify-items: center;
+    gap: 0;
+  }
+
+  .main aside h2 {
+    margin: 0;
+  }
+
+  .main aside ul li {
+    margin-top: 32px;
+  }
+}

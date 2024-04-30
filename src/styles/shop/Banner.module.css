@@ -18,3 +18,10 @@
   padding-bottom: 4px;
   padding-right: 64px;
 }
+
+@media (max-width: 1000px) {
+  .banner h1 {
+    font-size: 4rem;
+    padding-right: 32px;
+  }
+}
