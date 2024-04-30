@@ -25,3 +25,15 @@
     padding-right: 32px;
   }
 }
+
+@media (max-width: 600px) {
+  .banner {
+    height: 30vh;
+  }
+
+  .banner h1 {
+    height: 30vh;
+    font-size: 2.5rem;
+    padding-right: 24px;
+  }
+}

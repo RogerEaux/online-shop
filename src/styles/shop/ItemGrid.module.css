@@ -2,7 +2,7 @@
   display: grid;
   grid-template:
     'number sorter'
-    'items items';
+    'items items' / max-content 1fr;
   align-items: center;
   gap: 32px;
 }
@@ -23,7 +23,22 @@
   grid-area: items;
   justify-self: center;
   align-self: center;
+  text-align: center;
   font-size: var(--huge-font);
   font-weight: 700;
   margin: 64px;
+}
+
+@media (max-width: 1000px) {
+  .noItems {
+    font-size: var(--large-font);
+    margin: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .noItems {
+    font-size: var(--medium-font);
+    margin: 24px;
+  }
 }

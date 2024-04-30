@@ -42,3 +42,27 @@
     margin-top: 32px;
   }
 }
+
+@media (max-width: 600px) {
+  .main {
+    padding: 24px;
+  }
+
+  .main aside {
+    padding: 24px 0;
+    margin-bottom: 16px;
+  }
+
+  .main aside h2 {
+    text-align: center;
+  }
+
+  .main aside ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .main aside ul li {
+    margin-top: 16px;
+  }
+}
