@@ -8,3 +8,19 @@
   height: 128px;
   width: auto;
 }
+
+@media (max-width: 1000px) {
+  .loading {
+    margin: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .loading {
+    margin: 32px;
+  }
+
+  .loading > img {
+    height: 64px;
+  }
+}
