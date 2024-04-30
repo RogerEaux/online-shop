@@ -37,6 +37,10 @@
 }
 
 @media (max-width: 600px) {
+  .itemGrid {
+    gap: 16px;
+  }
+
   .noItems {
     font-size: var(--medium-font);
     margin: 24px;
