@@ -23,6 +23,7 @@
   flex-direction: column;
   gap: 16px;
   margin-left: 64px;
+  word-wrap: break-word;
 }
 
 .details > h1 {
