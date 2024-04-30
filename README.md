@@ -63,12 +63,16 @@ To setup and work on this project locally:
 
 1. Clone the project
 
+HTTP
+
 ```
-HTTP - $ git clone https://github.com/RogerEaux/shopping-cart.git
+$ git clone https://github.com/RogerEaux/shopping-cart.git
+```
 
-or
+SSH
 
-SSH - $ git clone git@github.com:RogerEaux/shopping-cart.git
+```
+$ git clone git@github.com:RogerEaux/shopping-cart.git
 ```
 
 2. Move to the cloned directory
