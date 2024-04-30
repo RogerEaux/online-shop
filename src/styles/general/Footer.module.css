@@ -125,6 +125,7 @@ a {
       'links'
       'author';
     gap: 32px;
+    padding: 24px;
   }
 
   .about,

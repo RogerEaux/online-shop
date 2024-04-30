@@ -47,7 +47,7 @@
   padding: 16px 32px;
   border: none;
   border-radius: 8px;
-  margin-top: 16px;
+  margin: 16px 0;
   background-size: 300% 100%;
   background-position: 100% 0;
   background-image: linear-gradient(
@@ -78,17 +78,46 @@
 @media (max-width: 1000px) {
   .productCard {
     flex-direction: column;
+    padding: 32px;
   }
 
   .image {
-    flex: 1;
-    align-self: center;
-    width: 70vh;
-    height: 50vw;
+    width: 70vw;
     margin-bottom: 32px;
   }
 
   .details {
     margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .details > div > div > img {
+    height: 16px;
+  }
+
+  .productCard {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .details > h1 {
+    font-size: var(--medium-font);
+  }
+
+  .details > h2 {
+    font-size: var(--small-font);
+  }
+
+  .details > p {
+    font-size: var(--medium-font);
+  }
+
+  .details > button {
+    font-size: var(--small-font);
+  }
+
+  .details div p {
+    font-size: var(--small-font);
   }
 }
