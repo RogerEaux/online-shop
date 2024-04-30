@@ -6,10 +6,10 @@
 
 ## Features
 
-- Pages: The site is structures in different pages: Home, Shop and Product pages.
+- Pages: The site is structured in different pages: Home, Shop and Product pages.
 
-  - The Home page acts as a welcome to users using attractive imagery and effects to catch users' attention while displaying some of the products within the shop and offering the opportunity to explore.
-  - The Shop page functions as the display case for all the products offered in the shop. From here users can navigate to each of the individual products
+  - The Home page acts as a welcome to users, using attractive imagery and effects to catch users' attention while displaying some of the products within the shop and offering the opportunity to explore.
+  - The Shop page functions as the display case for all the products offered in the shop. From here, users can navigate to each of the individual products
   - The Product page delivers more details about each of the products in the shop and lets users add them to their cart
 
 - Cart: The cart allows users to add, remove and edit the quantities of the products found in the shop. The cart can be accessed at any page in the shop
@@ -20,7 +20,7 @@
 
 - Product Sorter: The sorter allows users to sort the products by a certain quality, be it price, name or popularity. This can be combined with the category or search filter to provide a better user experience when searching for a product
 
-- Responsive: The design of the website is inherently responsive taking advantage of different viewing sizes to display the content in both aesthetically pleasing and effective ways
+- Responsive: The design of the website is inherently responsive, taking advantage of different viewing sizes to display the content in both aesthetically pleasing and effective ways
 
 ## Built using
 
