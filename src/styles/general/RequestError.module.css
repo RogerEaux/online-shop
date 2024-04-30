@@ -22,3 +22,24 @@
   color: var(--invert);
   cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+  .error {
+    margin: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .error {
+    margin: 32px;
+  }
+
+  .error > h2 {
+    font-size: var(--medium-font);
+  }
+
+  .error > a {
+    font-size: var(--small-font);
+    padding: 16px 24px;
+  }
+}
