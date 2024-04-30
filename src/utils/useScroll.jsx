@@ -8,7 +8,7 @@ function useScroll() {
     function handleScroll() {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > previousScrollY && currentScrollY > 105) {
+      if (currentScrollY > previousScrollY && currentScrollY > 128) {
         setIsHidden(true);
       } else {
         setIsHidden(false);

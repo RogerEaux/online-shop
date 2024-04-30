@@ -3,6 +3,7 @@
   align-items: center;
   position: sticky;
   top: 0;
+  min-height: 128px;
   background-color: #efefff80;
   backdrop-filter: blur(32px);
   padding: 32px 64px;
@@ -12,7 +13,7 @@
 
 .navBar.hidden {
   transition: all 0.5s ease-in;
-  transform: translateY(-105px);
+  transform: translateY(-128px);
 }
 
 .logo > img {
@@ -49,7 +50,6 @@
   .navBar {
     padding: 32px;
     justify-content: space-between;
-    min-height: 128px;
   }
 
   .burgerButton {
